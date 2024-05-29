@@ -1,0 +1,64 @@
+#########Iniciando um NOVO PROJETO
+>> Crie uma pasta na area de trabalho com o nome do projeto.
+>> Entre no github.com e cria um repositorio com o mesmo nome do projeto.
+>> Abra a pasta do projeto com o VSCODE.
+>> Crie os arquivos iniciais (index.html, style.css, script.js, ....)
+>> Abra um terminal novo no VSCode e digite os seguintes codigos:
+
+>>> INICIA O PROJETO no GITHUB
+git init
+
+>>> CONFIGURAR O USUARIO GITHUB
+git config --global user.name "nome_usuario_github"
+
+>>> CONFIGURAR O E-MAIL GITHUB
+git config --global user.email "email@cadastrado.com.br"
+
+>>> COMANDO ADICIONAR ARQUIVOS MODIFICADOS
+git add .
+
+>>> TEXTO QUE IRA MOSTRAR COMO MODIFICAÇÃO DO(S) ARQUIVO(S).
+git commit -m "Começando Projeto0"
+
+>>> NESTA PARTE ELE IRA ABRIR O NAVEGADOR E PEDIR PARA AUTORIZAR O COMPUTADOR COM SEU USUARIO/SENHA
+git branch -M main
+
+>>> ESTE COMANDO SERVER PARA VER QUAIS ARQUIVOS ESTÃO PRONTAS A SEREM ENVIADAS
+git status
+
+>>> ADICIONAR O REPOSITORIO NO QUAL IREMOS TRABALHAR
+git remote add origin https://github.com/seu_usuario/nome_projeto.git
+
+>>> ENVIA OS ARQUIVOS
+git push -u origin main
+
+######### Pegando o PROJETO no GITHUB e trazendo para maquina
+>> Abra o Git Bash (icone na area de trabalho)
+>> Digite: ls <ENTER>
+>> Digite: cd Desktop <ENTER>
+>> Digite: git clone https://github.com/seu_usuario/nome_projeto <ENTER>
+>> Ele ira baixar do GitHub os arquivos, ai so abrir a pasta com o VSCode e fazer as alterações
+
+######### Atualizando os arquivos no GitHUB
+>> CONFIGURAR O USUARIO GITHUB
+git config --global user.name "nome_usuario_github"
+
+>> CONFIGURAR O E-MAIL GITHUB
+git config --global user.email "email@cadastrado.com.br"
+
+>> COMANDO ADICIONAR ARQUIVOS MODIFICADOS
+git add .
+
+>> TEXTO QUE IRA MOSTRAR COMO MODIFICAÇÃO DO(S) ARQUIVO(S).
+git commit -m "Começando Projeto1"
+
+>> ENVIA OS ARQUIVOS
+git push
+
+
+>>> Para cada versão que ira subir agora só digitar:
+git add .
+git commit -m "Começando Projeto2"
+git push
+
+e assim sendo so finalizar
