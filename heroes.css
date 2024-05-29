@@ -1,0 +1,10 @@
+@media (min-width: 992px) {
+  .rounded-lg-3 { border-radius: .3rem; }
+}
+
+.container_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
