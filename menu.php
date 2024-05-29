@@ -20,7 +20,7 @@ include_once "conexao.php";
 
 <body>
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             BEM VINDO
         </a>
 
@@ -36,10 +36,7 @@ include_once "conexao.php";
     </div>
 
     <!-- <div class="flex-shrink-0 p-3" style="width: 280px;"> -->
-    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-        <svg class="bi pe-none me-2" width="30" height="24">
-        </svg>
-    </a>
+    <img src="img/logo.png" alt="logop" srcset="logop">
 
     <div class="container_menu">
         <ul class="list-unstyled ps-0">
@@ -195,9 +192,10 @@ include_once "conexao.php";
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <a class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap" />
+                    <!-- img footer -->
+                     />
                 </svg>
             </a>
             <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Company, Inc</span>
