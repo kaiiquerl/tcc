@@ -1,73 +1,29 @@
-DROP DATABASE IF EXISTS bd3;
-CREATE DATABASE bd3;
-USE bd3;
+DROP DATABASE if EXISTS inventario;
+CREATE DATABASE inventario;
+USE inventario;
 
-SET @numero = -1;
+CREATE TABLE tb_item (
+	codigo_patrimonio INT NOT NULL,
+	descricao  VARCHAR(30),
+	bloco  VARCHAR(30),
+	sala VARCHAR(30),
+	observacao VARCHAR(255),
+	PRIMARY KEY(codigo_patrimonio)
+);
 
-SELECT CASE @numero
-       WHEN 1 THEN 'Um'
-		 WHEN 2 THEN 'Dois'
-		 WHEN 3 THEN 'Três'
-		 WHEN 4 THEN 'Quatro'
-		 WHEN 5 THEN 'Cinco'
-		 ELSE 'Menor/Maior'
-END; 
+CREATE TABLE tb_login(
+	usuario_id INT NOT NULL AUTO_INCREMENT,
+	usuario VARCHAR (50),
+	senha VARCHAR (40),
+	tipo CHAR(1) DEFAULT 'U',
+	PRIMARY KEY(usuario_id)
+);
 
-SELECT IF (@numero>5, 
-        CONCAT( 'O número: ', @numero, 'é maior ou igual a 5',
-        CONCAT( 'O número: ', @numero, 'é menor que 5')) AS res;
-        
-SET @variavel = NULL;
--- FALSE ou 0
-SELECT IF (IFNULL(@variavel, 1) = FALSE, 
-         'Variável nula'
-          'Variável não nula');
-          
-CREATE TABLE produtos(
-id   INT NOT NULL AUTO_INCREMENT,
-nome VARCHAR(60) NOT NULL,
-qtde INT,
-valor DECIMAL(10,2),
-PRIMARY KEY(id)
-); 
+INSERT INTO tb_login(usuario, senha, tipo)
+VALUES 
+('admin@local.com'  , ('123'), 'A'),
+('usuario@local.com', SHA1('123'), 'U');
 
-INSERT INTO produtos (nome, qtde, valor)
-VALUES ('Tenis'    , 20 ,  200),
-       ('Bota '    , 15 ,  300),
-		 ('Sapato'   , NULL ,  150),
-		 ('Sandália' , 50 ,  180),
-		 ('Chinelo'  , 100,   NULL),         
-			 
-SELECT id, nome, 
-       IFNULL(qtde , 0)    AS qtde,
-		 IFNULL(valor, 0)    AS valor,
-		 IFNULL(SUM(qtde*valor), 0)  AS total		 
-FROM produtos;		 
-		 		 
-
-SELECT AVG(qtde*valor) AS `média` FROM produtos;
-SELECT SUM(qtde) AS qtde_produtos FROM produtos;
-
-SET @maiorvalor = 0;
-SET @_id = 0;
-SET @_nome = '';
-SELECT nome INTO @_id 
-
-FROM produtos 
-WHERE valor = @maiorvalor;       
- 
-
-SELECT @maiorvalor;
-SELECT @_id;
-SELECT @_nome;
-
-SELECT MIN(valor) AS menor_valor FROM produtos;
-
-
-SELECT MAX(valor) AS maior_valor  FROM produtos;
-SELECT MAX(valor) AS menor_valor  FROM produtos;
-
-
-
+SELECT * FROM tb_login;
 
 		 		 			          
