@@ -9,7 +9,17 @@ body *{
     box-sizing: border-box;
 }
 
+#page-container {
+    position: auto;
+    min-height: 53vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* altura do rodapé */
+  }
+
 .main-login{
+    
     width: 100vw;
     height: 100vh;
     background: #201b2c;
@@ -243,6 +253,10 @@ footer {
     padding: 2rem;
     text-align: center;
     height: 150px;
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  
 }
 
 footer p {

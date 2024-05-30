@@ -83,13 +83,13 @@ include_once "conexao.php";
             <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
                 <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
                     <h1 class="display-4 fw-bold lh-1 text-body-emphasis">SCHOOL STOCK</h1>
-                    <p class="lead">.........</p>
+                    <p class="lead">Somos uma empresa líder em inventários, destacando-nos pela inovação e excelência. Oferecemos serviços de Inventário Patrimonial que garantem a identificação completa dos ativos da sua empresa, permitindo ajustes contábeis e saneamento de irregularidades, se necessário. Conte conosco para soluções precisas e confiáveis, que atendem e superam suas expectativas, garantindo a integridade do seu patrimônio.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
 
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                    <img class="rounded-lg-3" src="bootstrap-docs.png" alt="" width="720">
+                    <img class="rounded-lg-3" src="etec.jpg" alt="" width="720">
                 </div>
             </div>
         </div>
@@ -189,6 +189,10 @@ include_once "conexao.php";
             <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
         </symbol>
     </svg>
+
+
+    <div id="page-container">
+   <div id="content-wrap">
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
