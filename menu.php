@@ -46,9 +46,9 @@ include_once "conexao.php";
                 </button>
                 <div class="collapse show" id="home-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="exibir_admin.php?bloco=A&lab=LAB 1" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
-                        <li><a href="exibir_admin_adimn.php?bloco=A&lab=LAB 2" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
-                        <li><a href="exibir_admin.php?bloco=A&lab=LAB 3" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
+                        <li><a href="exibir.php?bloco=A&lab=LAB 1" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
+                        <li><a href="exibir.php?bloco=A&lab=LAB 2" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
+                        <li><a href="exibir.php?bloco=A&lab=LAB 3" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
                     </ul>
                 </div>
             </li>
@@ -58,9 +58,9 @@ include_once "conexao.php";
                 </button>
                 <div class="collapse" id="dashboard-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="exibir_admin.php?bloco=B&lab=LAB 1" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
-                        <li><a href="exibir_admin.php?bloco=B&lab=LAB 2" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
-                        <li><a href="exibir_admin.php?bloco=B&lab=LAB 3" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
+                        <li><a href="exibir.php?bloco=B&lab=LAB 1" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
+                        <li><a href="exibir.php?bloco=B&lab=LAB 2" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
+                        <li><a href="exibir.php?bloco=B&lab=LAB 3" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
                     </ul>
                 </div>
             </li>
@@ -70,9 +70,9 @@ include_once "conexao.php";
                 </button>
                 <div class="collapse" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="exibir_admin.php?bloco=C&lab=LAB 1" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
-                        <li><a href="exibir_admin.php?bloco=C&lab=LAB 2" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
-                        <li><a href="exibir_admin.php?bloco=C&lab=LAB 3" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
+                        <li><a href="exibir.php?bloco=C&lab=LAB 1" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
+                        <li><a href="exibir.php?bloco=C&lab=LAB 2" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
+                        <li><a href="exibir.php?bloco=C&lab=LAB 3" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
                     </ul>
                 </div>
             </li>

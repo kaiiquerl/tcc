@@ -10,7 +10,7 @@
         $resultado = mysqli_num_rows($consulta);
         $usuario = '';
         $tipo = '';
-        
+
         if ($resultado > 0) {
             while ($row = mysqli_fetch_assoc($consulta)) {
                 $usuario = $row['usuario'];
@@ -21,22 +21,22 @@
             $_SESSION['usuario'] = $usuario;
             $_SESSION['tipo'] = $tipo;
 
-            if ($tipo == 'U') {
+            if ($tipo == 'A') {
                 header("Location: menu_admin.php");
-            } else if ($tipo == 'A'){
+            } else if ($tipo == 'U') {
                 header('Location: menu.php');
             } else {
-                echo "Acesso negado!";    
+                echo "Acesso negado!";
             }
         } else {
             echo "Acesso negado!";
         }
-    } elseif ( isset( $_POST['btn_cadastrar'] ) ) {
+    } elseif (isset($_POST['btn_cadastrar'])) {
         $usuario = $_POST['txt_usuario'];
         $senha   = $_POST['txt_senha'];
 
         $sql = "INSERT INTO tb_login (usuario, senha) VALUES ('$usuario', '$senha')";
-        
+
         try {
             $consulta = mysqli_query($conexao, $sql);
             if ($consulta > 0) {
@@ -78,13 +78,16 @@
                          <label for="usuario">Usuário</label>
                          <input type="text" name="txt_usuario" placeholder="Usuário">
                      </div>
+
                      <div class="textfield">
                          <label for="senha">Senha</label>
                          <input type="password" name="txt_senha" placeholder="Senha">
                      </div>
 
-                     <button class="btn-login" name="btn_login">Login</button><br>
-                     <button class="btn-cadastrar" name="btn_cadastrar"> <a href="cadastro.php" style="color: #2b134b; text-decoration: none"> Cadastrar</a></button>
+                     <div class="btn">
+                         <button class="btn-login" name="btn_login">Login</button><br>
+                         <a href="cadastro.php" class="btn-cadastrar" name="btn_cadastrar" style="color: #2b134b; text-decoration: none">Cadastrar</a>
+                     </div>
                  </form>
              </div>
          </div>
