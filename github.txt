@@ -36,7 +36,7 @@ git push -u origin main
 >> Abra o Git Bash (icone na area de trabalho)
 >> Digite: ls <ENTER>
 >> Digite: cd Desktop <ENTER>
->> Digite: git clone https://github.com/seu_usuario/nome_projeto <ENTER>
+>> Digite: git clone https://github.com/kaiiquerl/tcc <ENTER>
 >> Ele ira baixar do GitHub os arquivos, ai so abrir a pasta com o VSCode e fazer as alterações
 
 ######### Atualizando os arquivos no GitHUB
