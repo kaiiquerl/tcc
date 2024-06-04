@@ -35,7 +35,7 @@ include_once "conexao.php";
         </ul>
     </div>
 
-    <!-- <div class="flex-shrink-0 p-3" style="width: 280px;"> -->
+   
     <img src="img/logo.png" alt="logop" srcset="logop">
 
     <div class="container_menu">
@@ -95,45 +95,7 @@ include_once "conexao.php";
         </div>
 
     </div>
-    <!-- </div> -->
-
-    <!-- <img class="imagem1" src="img/imgcadastro2.png" alt="teste">  -->
-    <!-- <nav style="background-color: #333;">
-            <ul>
-                <li><a href="login.php" class="scale">Home</a></li>
-                <li>
-                    <a href="#" class="scale">Bloco-A</a>
-                    <div class="sub_menu">
-                        <ul>
-                            <li><a href="exibir.php?bloco=A&lab=LAB 1" class="rotate">LAB 1</a></li>
-                            <li><a href="exibir.php?bloco=A&lab=LAB 2" class="rotate">LAB 2</a></li>
-                            <li><a href="exibir.php?bloco=A&lab=LAB 3" class="rotate">LAB 3</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="scale">Bloco-B</a>
-                    <div class="sub_menu">
-                        <ul>
-                            <li><a href="exibir.php?bloco=B&lab=LAB 1" class="rotate">LAB 1</a></li>
-                            <li><a href="exibir.php?bloco=B&lab=LAB 2" class="rotate">LAB 2</a></li>
-                            <li><a href="exibir.php?bloco=B&lab=LAB 3" class="rotate">LAB 3</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="scale">Bloco-C</a>
-                    <div class="sub_menu">
-                        <ul>
-                            <li><a href="exibir.php?bloco=C&lab=LAB 1" class="rotate">LAB 1</a></li>
-                            <li><a href="exibir.php?bloco=C&lab=LAB 2" class="rotate">LAB 2</a></li>
-                            <li><a href="exibir.php?bloco=C&lab=LAB 3" class="rotate">LAB 3</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#" class="scale">Sobre</a></li>
-            </ul>
-        </nav> -->
+ 
     </div>
 
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
