@@ -9,10 +9,10 @@
 git init
 
 >>> CONFIGURAR O USUARIO GITHUB
-git config --global user.name "nome_usuario_github"
+git config --global user.name "kaiiquerl"
 
 >>> CONFIGURAR O E-MAIL GITHUB
-git config --global user.email "email@cadastrado.com.br"
+git config --global user.email "kaiiquerl21@gmail.com"
 
 >>> COMANDO ADICIONAR ARQUIVOS MODIFICADOS
 git add .
@@ -27,7 +27,7 @@ git branch -M main
 git status
 
 >>> ADICIONAR O REPOSITORIO NO QUAL IREMOS TRABALHAR
-git remote add origin https://github.com/seu_usuario/nome_projeto.git
+git remote add origin https://github.com/kaiiquerl/tcc.git
 
 >>> ENVIA OS ARQUIVOS
 git push -u origin main
@@ -41,10 +41,10 @@ git push -u origin main
 
 ######### Atualizando os arquivos no GitHUB
 >> CONFIGURAR O USUARIO GITHUB
-git config --global user.name "nome_usuario_github"
+git config --global user.name "kaiiquerl"
 
 >> CONFIGURAR O E-MAIL GITHUB
-git config --global user.email "email@cadastrado.com.br"
+git config --global user.email "kaiiquerl21@gmail.com"
 
 >> COMANDO ADICIONAR ARQUIVOS MODIFICADOS
 git add .
@@ -54,7 +54,6 @@ git commit -m "Começando Projeto1"
 
 >> ENVIA OS ARQUIVOS
 git push
-
 
 >>> Para cada versão que ira subir agora só digitar:
 git add .
