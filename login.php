@@ -84,7 +84,7 @@
                          <input type="password" name="txt_senha" placeholder="Senha">
                      </div>
 
-                     <div class="btn">
+                     <div class="btn2">
                          <button class="btn-login" name="btn_login">Login</button><br>
                          <a href="cadastro.php" class="btn-cadastrar" name="btn_cadastrar" style="color: #2b134b; text-decoration: none">Cadastrar</a>
                      </div>

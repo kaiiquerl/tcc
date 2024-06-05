@@ -50,7 +50,7 @@ if (isset($_POST['btn_login'])) {
                         <label for="senha">Defina Sua Senha</label>
                         <input type="password" name="txt_senha" placeholder="Senha">
                     </div>
-                    <div class="btn">
+                    <div class="btn2">
                         <button class="btn-cadastrar" name="btn_cadastrar">Cadastrar</button>
                     </div>
                 </form>
