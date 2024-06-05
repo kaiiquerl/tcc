@@ -91,14 +91,14 @@ if (isset($_GET['excluir'])) {
 
     <div class="crud-body">
       <table>
-        <thead>
+        <thead class="tabela_itens">
           <tr>
             <th>Codigo</th>
             <th>Descição</th>
             <th>Bloco</th>
             <th>Sala</th>
             <th>Observação</th>
-            <th>Gerenciar</th>
+            <th></th>
           </tr>
           <?php
           // $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio;";
@@ -113,13 +113,11 @@ if (isset($_GET['excluir'])) {
                          <td> ' . $dados["sala"] . '</td>
                          <td> ' . $dados["observacao"] . '</td>
                          <td><br>
-                             <a href="exibir.php?excluir=' . $dados["codigo_patrimonio"] . '&bloco=' . $bloco_label . '&lab=' . $lab_label . '" id="new">
-                                  Excluir
-                             </a>
+                            
                              &nbsp;&nbsp;&nbsp;
-                             <a href="exibir.php?alterar=' . $dados["codigo_patrimonio"] . '&bloco=' . $bloco_label . '&lab=' . $lab_label . ' " onclick="openModal2()"  id="new">
-                                 Alterar
-                             </a>
+                             
+                                 
+                           
                          </td>
                      <tr>
                      ';

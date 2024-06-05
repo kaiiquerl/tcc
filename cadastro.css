@@ -90,7 +90,16 @@ tbody tr td {
 
 thead tr th {
   padding: 5px;
-  text-align: start;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.btnExcluir{
+  padding: 15px;
+}
+
+thead td {
+  padding: 5px;
+  text-align: center;
   margin-bottom: 50px;
 }
 
@@ -124,6 +133,7 @@ tbody tr td.acao {
   thead tr th.acao {
     width: auto!important;
   }
+  
   
   td button i {
     font-size: 20px!important;

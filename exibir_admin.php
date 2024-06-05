@@ -111,12 +111,12 @@ if (isset($_GET['excluir'])) {
                          <td> ' . $dados["bloco"] . '</td>
                          <td> ' . $dados["sala"] . '</td>
                          <td> ' . $dados["observacao"] . '</td>
-                         <td><br>
-                             <a href="exibir.php?excluir=' . $dados["codigo_patrimonio"] . '&bloco=' . $bloco_label . '&lab=' . $lab_label . '" id="new">
+                         <td class="btnExcluir">
+                             <a href="exibir_admin.php?excluir=' . $dados["codigo_patrimonio"] . '&bloco=' . $bloco_label . '&lab=' . $lab_label . '" id="new">
                                   Excluir
                              </a>
                              &nbsp;&nbsp;&nbsp;
-                             <a href="exibir.php?alterar=' . $dados["codigo_patrimonio"] . '&bloco=' . $bloco_label . '&lab=' . $lab_label . ' " onclick="openModal2()"  id="new">
+                             <a href="exibir_admin.php?alterar=' . $dados["codigo_patrimonio"] . '&bloco=' . $bloco_label . '&lab=' . $lab_label . ' " onclick="openModal2()"  id="new">
                                  Alterar
                              </a>
                          </td>
@@ -134,7 +134,7 @@ if (isset($_GET['excluir'])) {
     <div class="modal-container" id="modal_insert">
       <div class="modal">
 
-        <form action="exibir.php" method="post">
+        <form action="exibir_admin.php" method="post">
           <label for="txt_codigo">Codigo</label>
           <input name="txt_codigo" type="number" required />
 
@@ -176,7 +176,7 @@ if (isset($_GET['excluir'])) {
       <div class="modal-container active" id="modal_edit" onclick="openModal2(this)">
         <div class="modal">
 
-          <form action="exibir.php" method="post">
+          <form action="exibir_admin.php" method="post">
             <label for="txt_codigo">Codigo</label>
             <input name="txt_codigo" type="number" required value='<?= $dados['codigo_patrimonio'] ?>' />
 
