@@ -76,7 +76,7 @@ if (isset($_GET['excluir'])) {
 
 <body>
   <div class="top-bar">
-    <a href="menu.php" class="scale">Home</a>
+    <a href="menu_admin.php" class="scale">Home</a>
     <span id="selected-block">Bloco <?php echo $bloco_label; ?></span>
     <span id="selected-lab"><?php echo $lab_label; ?></span>
   </div>
