@@ -220,7 +220,21 @@ if (isset($_GET['excluir'])) {
     }
     ?>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js">
+     var search = document.getElementById('pesquisar');
+
+    search.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") 
+        {
+            searchData();
+        }
+    });
+
+    function searchData()
+    {
+        window.location = 'exibir_admin.php?search='+search.value;
+    }
+  </script>
 </body>
 
 </html>
