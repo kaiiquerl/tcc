@@ -323,6 +323,12 @@ main section {
     transform: rotate(10deg);
 }
 
+.box-search{
+    display: flex;
+    justify-content: center;
+    gap: .1%;
+}
+
 
 
     
