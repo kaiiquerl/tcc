@@ -86,7 +86,7 @@
 
                      <div class="btn2">
                          <button class="btn-login" name="btn_login">Login</button><br>
-                         <a href="cadastro.php" class="btn-cadastrar" name="btn_cadastrar" style="color: #2b134b; text-decoration: none">Cadastrar</a>
+                         <a href="cadastro.php" class="btn-cadastrar" name="btn_cadastrar" style="color: #ffff; text-decoration: none">Cadastrar</a>
                      </div>
                  </form>
              </div>

@@ -21,7 +21,7 @@ CREATE TABLE tb_login(
 
 INSERT INTO tb_login(usuario, senha, tipo)
 VALUES 
-('admin@local.com'  , ('123'), 'A'),
+('admin'  , ('admin'), 'A'),
 ('usuario@local.com', SHA1('123'), 'U');
 
 SELECT * FROM tb_login;

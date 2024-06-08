@@ -168,7 +168,7 @@ if (isset($_GET['excluir'])) {
           <label for="txt_codigo">Codigo</label>
           <input name="txt_codigo" type="number" required />
 
-          <label for="txt_descricao">Descição</label>
+          <label for="txt_descricao">Descrição</label>
           <input name="txt_descricao" type="text" required />
 
           <label for="escolhas">Escolha o Bloco:</label>
