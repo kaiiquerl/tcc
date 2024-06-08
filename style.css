@@ -207,6 +207,18 @@ body * {
     height: auto;
 }
 
+.logoM{
+    width: 90px;
+    height: 90px;
+}
+
+.submenu{
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+   
+}
+
 
 
 /**                            ***/
