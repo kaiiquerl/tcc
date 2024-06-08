@@ -6,3 +6,5 @@ logo
 *sobre
 segurança url
 voltar quando filtrar
+corrigir fazer cadastro em branco
+recraft

@@ -35,8 +35,8 @@ if (isset($_POST['btn_login'])) {
     <div class="main-login">
         <div class="left-login">
 
-            <h1>Torne-se um membro!!!</h1>
-            <img src="img/box.svg" class="img_box" alt="box animação">
+            <h1>TORNE-SE UM MEMBRO!!!</h1>
+            <img src="img/img_cadastro.svg" class="img_cadastro" alt="cadastro animação">
         </div>
         <div class="right-login">
             <div class="card-login">
@@ -51,7 +51,7 @@ if (isset($_POST['btn_login'])) {
                         <input type="password" name="txt_senha" placeholder="Senha">
                     </div>
                     <div class="btn2">
-                        <button class="btn-cadastrar" name="btn_cadastrar">Cadastrar</button>
+                        <button class="btn-cadastrar2" name="btn_cadastrar">Cadastrar</button>
                     </div>
                 </form>
             </div>
