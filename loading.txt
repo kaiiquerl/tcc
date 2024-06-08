@@ -1,6 +1,7 @@
 css projeto
-*filtro
-mensagens de texto
+filtro css
+mensagens de texto/confirmação excluir e alterar
 rolagem descricao
 logo
-.
+*sobre
+segurança url

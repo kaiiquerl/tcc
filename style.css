@@ -22,7 +22,7 @@ body *{
     
     width: 100vw;
     height: 100vh;
-    background: #201b2c;
+    background: #a2c8e7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@ body *{
 
 .left-login > h1 {
     font-size: 3vw;
-    color: #77ffc0;
+    color: #f2f6ff;
 }
 
 .right-login {
@@ -57,13 +57,13 @@ body *{
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: #2f2841;
+    background: #95b9fd;
     border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 10px 40px #6c9be0f5;
 }
 
 .card-login{
-    color: #00ff88;
+    color: #ffffff;
     font-weight: 800;
     margin: 0;
 }
@@ -82,21 +82,21 @@ body *{
     border: none;
     border-radius: 10px;
     padding: 15px;
-    background: #514869;
-    color: #f0ffffde;
+    background: #98b6ed;
+    color: #ffffffde;
     font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 10px 40px #2066cff5;
     outline: none;
     box-sizing: border-box;
 }
 
 .textfield > label {
-    color: #f0ffffde;
+    color: white;
     margin-bottom: 10px;
 }
 
 .textfield > input::placeholder{
-    color: #f0ffffde;
+    color: white;
 }
 
 .btn-login{
@@ -110,27 +110,26 @@ body *{
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 3px;
-    color: #2b134b;
-    background: #00ff88;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00ff8052;
+    color: #ffffff;
+    background:  #516ead;
+    box-shadow: 0px 10px 40px -12px #5096fff5;
     
 }
 
 .btn-cadastrar{
+    width: 100%;
     padding: 16px 0px;
     margin: 3px;
     border: none;
     border-radius: 8px;
     outline: none;
+    font-size: 15px;
+    text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 15px;
-    color: #2b134b;
-    background: #00ff88;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00ff8052;
+    color: #ffffff;
+    background:  #516ead;
+    box-shadow: 0px 10px 40px -12px #5096fff5;
 }
 .btn2{
     width: 260px;
@@ -327,8 +326,9 @@ main section {
     display: flex;
     justify-content: center;
     gap: .1%;
-    width: 80%;
 }
+
+
 
     
     
