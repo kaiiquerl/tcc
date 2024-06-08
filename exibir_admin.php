@@ -8,7 +8,7 @@ if (!empty($_GET['bloco'])) {
  $_SESSION["blocoL"] = $bloco_label;
   $lab_label = @$_GET['lab'];
  $_SESSION["labL"] = $lab_label;
-  echo 'criou session'.$_SESSION["labL"];
+  echo ''.$_SESSION[""];
 }
 
 
@@ -22,7 +22,6 @@ if (!$lab_label) {
 
   if (!empty($_GET['search'])) {
     $data = $_GET['search'];
-    echo $data;
     $sql = "SELECT * FROM tb_item WHERE (codigo_patrimonio LIKE '%$data%' or descricao LIKE '%$data%' or observacao LIKE '%$data%') AND (bloco = '" .$_SESSION["blocoL"] . "' AND sala = '" .$_SESSION["labL"] . "') ORDER BY codigo_patrimonio DESC";
   } else {
     $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio WHERE bloco = '" .$_SESSION["blocoL"] . "' AND sala = '" .$_SESSION["labL"] . "' DESC";
