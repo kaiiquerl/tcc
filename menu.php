@@ -184,23 +184,22 @@ include_once "conexao.php";
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                 <div class="col-md-4 d-flex align-items-center">
                     <a class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24">
-                            />
+                        <img src="img/logo_footer.svg" class="logof" alt="img footer">
                         </svg>
                     </a>
-                    <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Company, Inc</span>
+                    <span class="mb-3 mb-md-0 text-body-secondary">Localização:
+                        Rodovia SP, 346 - km 204 - Morro Azul - CEP: 13990-000 - Espirito Santo do Pinhal/SP</span>
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#twitter" />
-                            </svg></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#instagram" />
-                            </svg></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#facebook" />
-                            </svg></a></li>
+                    E-mails:
+                    Diretoria: e047dir@cps.sp.gov.br
+                    Diretoria Administrativa: e047adm@cps.sp.gov.br
+                    Diretoria Acadêmica: e047acad@cps.sp.gov.br
+
+                    Tel.:
+                    (19) 3651-1229
+                    </svg></a></li>
                 </ul>
             </footer>
 

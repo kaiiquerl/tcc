@@ -121,7 +121,7 @@ if (isset($_GET['excluir'])) {
         <thead class="tabela_itens">
           <tr>
             <th>Codigo</th>
-            <th>Descição</th>
+            <th>Descrição</th>
             <th>Bloco</th>
             <th>Sala</th>
             <th>Observação</th>
