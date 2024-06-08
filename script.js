@@ -5,6 +5,19 @@ const btnSalvar = document.querySelector('#btnSalvar');
 let itens;
 let id;
 
+var search = document.getElementById('pesquisar');
+
+search.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchData();
+  }
+});
+
+function searchData() {
+  search = document.getElementById('pesquisar');
+  window.location = 'exibir_admin.php?search=' + search.value;
+}
+
 function openModal() {
   modal.classList.add('active');
 
@@ -19,9 +32,9 @@ function openModal2(obj) {
   //const modal2 = document.getElementById('modal_edit');
 
   obj.onclick = e => {
-     if (e.target.className.indexOf('modal-container') !== -1) {
-       obj.classList.remove('active');
-     }
+    if (e.target.className.indexOf('modal-container') !== -1) {
+      obj.classList.remove('active');
+    }
   }
 }
 
@@ -43,9 +56,9 @@ function deleteItem(index) {
 
 function openModal2(obj) {
   obj.onclick = e => {
-     if (e.target.className.indexOf('modal-container') !== -1) {
-       obj.classList.remove('active');
-     }
+    if (e.target.className.indexOf('modal-container') !== -1) {
+      obj.classList.remove('active');
+    }
   }
 }
 

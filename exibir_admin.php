@@ -1,8 +1,17 @@
 <?php
+session_start();
+$data = "";
 include_once "conexao.php";
 
-$bloco_label = @$_GET['bloco'];
-$lab_label = @$_GET['lab'];
+if (!empty($_GET['bloco'])) {
+  $bloco_label = @$_GET['bloco'];
+ $_SESSION["blocoL"] = $bloco_label;
+  $lab_label = @$_GET['lab'];
+ $_SESSION["labL"] = $lab_label;
+  echo 'criou session'.$_SESSION["labL"];
+}
+
+
 
 if (!$bloco_label) {
   $bloco_label = @$_POST['txt_bloco'];
@@ -10,6 +19,14 @@ if (!$bloco_label) {
 if (!$lab_label) {
   $lab_label = @$_POST['txt_sala'];
 }
+
+  if (!empty($_GET['search'])) {
+    $data = $_GET['search'];
+    echo $data;
+    $sql = "SELECT * FROM tb_item WHERE (codigo_patrimonio LIKE '%$data%' or descricao LIKE '%$data%' or observacao LIKE '%$data%') AND (bloco = '" .$_SESSION["blocoL"] . "' AND sala = '" .$_SESSION["labL"] . "') ORDER BY codigo_patrimonio DESC";
+  } else {
+    $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio WHERE bloco = '" .$_SESSION["blocoL"] . "' AND sala = '" .$_SESSION["labL"] . "' DESC";
+  }
 
 
 if (isset($_POST['btnSalvar'])) {
@@ -86,13 +103,16 @@ if (isset($_GET['excluir'])) {
     <div class="header">
       <span>Cadastro de Funcionários</span>
       <div class="box-search">
+
         <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
-        <button onclick="searchData()" class="btns btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-            </svg>
+        <button onclick="searchData()" class="btns btn-primary" name="btnpesquisar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
         </button>
-    </div>
+
+      </div>
+
       <button onclick="openModal()" id="new">Incluir</button>
     </div>
 
@@ -101,15 +121,18 @@ if (isset($_GET['excluir'])) {
         <thead>
           <tr>
             <th>Codigo</th>
-            <th>Descição</th>
+            <th>Descrição</th>
             <th>Bloco</th>
             <th>Sala</th>
             <th>Observação</th>
             <th>Gerenciar</th>
           </tr>
           <?php
-          // $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio;";
-          $sql = "SELECT * FROM tb_item WHERE bloco = '$bloco_label' AND sala = '$lab_label' ORDER BY codigo_patrimonio;";
+          if ($data == "") {
+            // $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio;";
+            $sql = "SELECT * FROM tb_item WHERE bloco = '$bloco_label' AND sala = '$lab_label' ORDER BY codigo_patrimonio;";
+          }
+         
           $resultado = mysqli_query($conexao, $sql);
           while ($dados = mysqli_fetch_assoc($resultado)) {
             echo '
@@ -128,7 +151,7 @@ if (isset($_GET['excluir'])) {
                                  Alterar
                              </a>
                          </td>
-                     <tr>
+                     <tr>                    
                      ';
           }
           ?>
@@ -221,19 +244,6 @@ if (isset($_GET['excluir'])) {
     ?>
   </div>
   <script src="script.js">
-     var search = document.getElementById('pesquisar');
-
-    search.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") 
-        {
-            searchData();
-        }
-    });
-
-    function searchData()
-    {
-        window.location = 'exibir_admin.php?search='+search.value;
-    }
   </script>
 </body>
 
