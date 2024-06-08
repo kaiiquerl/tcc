@@ -29,7 +29,6 @@ function openModal() {
 }
 
 function openModal2(obj) {
-  //const modal2 = document.getElementById('modal_edit');
 
   obj.onclick = e => {
     if (e.target.className.indexOf('modal-container') !== -1) {
@@ -44,7 +43,6 @@ function fecharModal2() {
 }
 
 function editItem(index) {
-  //openModal(true, index)
   console.log(index);
 }
 
