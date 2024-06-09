@@ -1,22 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+sans:wght@400;700&display=swap');
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Ajuste conforme necessário */
+    border-bottom: 2px solid #000000;
+}
+
+.welcome-text {
+    flex: 1;
+    text-align: left;
+}
+
+
+.headerimg {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Alinha a logo à esquerda do centro */
+    margin-right: 0%; /* Ajusta a posição da logo para a esquerda */
+}
+
+.headerimg img {
+    max-width: 100%;
+    height: auto;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    flex-direction: column;
+    color: #333
 }
 
+
 body * {
+    min-height: auto;
     box-sizing: border-box;
 }
 
-#page-container {
-    position: auto;
-    min-height: 53vh;
-}
 
 #content-wrap {
     padding-bottom: 2.5rem;
-    /* altura do rodapé */
 }
 
 .main-login {
@@ -210,7 +243,10 @@ body * {
 .logoM{
     width: 90px;
     height: 90px;
+    margin-top: auto;
+    margin-left: 200px;
 }
+
 
 .logof{
     width: 200px;
@@ -223,16 +259,12 @@ body * {
     margin-left: 500px;
    
 }
-
-
-
-/**                            ***/
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+   
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
-
 
 nav {
     display: flex;
@@ -308,20 +340,74 @@ nav ul li:hover .sub_menu {
 
 footer {
     background-color: #0e4768;
-    padding: 2rem;
-    text-align: center;
-    height: 150px;
-    position: absolute;
-    bottom: 0;
+    padding: 1rem 0;
     width: 100%;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dee2e6;
 }
 
-footer p {
-    color: #fff;
+footer {
+    background-color: #0e4768;
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+}
+
+.footer-links li {
+    margin-left: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none; 
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.footer-bottom {
+    background-color: #b31f98;
+    padding: 0.5rem 0;
+    color: rgb(1, 18, 255);
+}
+
+
+
+.footer-divider {
+    border: 200;
+    border-top: 1px solid #ed07fd;
     margin: 0;
+    padding: 1000;
+    margin-top: -8px;
 }
 
+
+
+
+.h1e{
+    color: rgba(255, 255, 255, 0.91);
+    font-size: 14px;
+}
 .logo {
     width: 8%;
 }

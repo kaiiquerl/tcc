@@ -20,20 +20,22 @@ include_once "conexao.php";
 </head>
 
 <body>
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <header class="header">
+        <a
+            class="welcome-text d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             Bem-vindo à SCHOOL STOCK
         </a>
 
-        <div class="submenu">
+        <div class="headerimg">
             <img src="img/logo.svg" class="logoM" alt="logop">
         </div>
 
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+        <ul class="nav nav-pills"> 
             <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page">Log Out</a></li>
         </ul>
     </header>
+
+
 
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         </ul>
@@ -105,9 +107,7 @@ include_once "conexao.php";
 
                     </div>
                 </div>
-                <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                    <img class="rounded-lg-3" src="etec.jpg" alt="" width="720">
-                </div>
+
             </div>
         </div>
 
@@ -178,35 +178,52 @@ include_once "conexao.php";
     </svg>
 
 
-    <div id="page-container">
-        <div id="content-wrap">
 
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                        <img src="img/logo_footer.svg" class="logof" alt="img footer">
-                        </svg>
-                    </a>
-                    <span class="mb-3 mb-md-0 text-body-secondary">Localização:
-                        Rodovia SP, 346 - km 204 - Morro Azul - CEP: 13990-000 - Espirito Santo do Pinhal/SP</span>
-                </div>
 
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    E-mails:
-                    Diretoria: e047dir@cps.sp.gov.br
-                    Diretoria Administrativa: e047adm@cps.sp.gov.br
-                    Diretoria Acadêmica: e047acad@cps.sp.gov.br
 
-                    Tel.:
-                    (19) 3651-1229
-                    </svg></a></li>
-                </ul>
-            </footer>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <a class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <img src="img/logo_footer.svg" class="logof" alt="img footer">
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary"></span>
+    </div>
+ 
+    SOBRE
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex footer-links">
+        <li class="nav-item">
+            <h1 class="h1e">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                </svg> E-mails:
+                Diretoria: e047dir@cps.sp.gov.br
+                <br>Diretoria Administrativa: e047adm@cps.sp.gov.br
+                <br>Diretoria Acadêmica: e047acad@cps.sp.gov.br
+                <br><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg> Tel.: (19) 3651-1229
+                <br><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg> Localização: Rodovia SP, 346 - km 204 - Morro Azul - CEP: 13990-000 - Espirito Santo do Pinhal/SP
+            </h1>
+        </li>
+    </ul>
+    <div class="w-100 text-center mt-4 footer-bottom">
+        <hr class="footer-divider">
+        <p>&copy; 2018, All Right Reserved Anup</p>
+    </div>
+</footer>
 
-            <script src="../assets/js/color-modes.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                crossorigin="anonymous"></script>
+
+
+
+
+    <script src="../assets/js/color-modes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
