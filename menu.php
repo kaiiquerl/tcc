@@ -46,7 +46,7 @@ include_once "conexao.php";
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                    Bloco A
+                    <h5 class="txtbloco">Bloco A</h5>
                 </button>
                 <div class="collapse show" id="home-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -62,7 +62,7 @@ include_once "conexao.php";
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                    Bloco B
+                    <h5 class="txtbloco">Bloco B</h5>
                 </button>
                 <div class="collapse" id="dashboard-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -78,7 +78,7 @@ include_once "conexao.php";
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                    Bloco C
+                    <h5 class="txtbloco">Bloco C</h5>
                 </button>
                 <div class="collapse" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -189,7 +189,7 @@ include_once "conexao.php";
         <span class="mb-3 mb-md-0 text-body-secondary"></span>
     </div>
  
-    SOBRE
+     <h5 class="meuBotao">SOBRE</h5>
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex footer-links">
         <li class="nav-item">
             <h1 class="h1e">
@@ -210,8 +210,9 @@ include_once "conexao.php";
             </h1>
         </li>
     </ul>
+    <hr class="footer-divider w-100" style="margin-bottom: -40px;"><br>
     <div class="w-100 text-center mt-4 footer-bottom">
-        <hr class="footer-divider">
+       
         <p>&copy; 2018, All Right Reserved Anup</p>
     </div>
 </footer>

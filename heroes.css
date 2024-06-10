@@ -8,4 +8,9 @@
   display: flex;
  margin-top: -25px;
   align-items: center;
+  font-size: 25px;
+}
+
+.txtbloco{
+  font-size: 20px;
 }

@@ -5,20 +5,27 @@ if (isset($_POST['btn_login'])) {
     $usuarioP = $_POST["txt_usuario"];
     $senhaP = $_POST["txt_senha"];
 
-    $sql = "SELECT * FROM tb_login WHERE usuario = '$usuarioP' AND senha = '$senhaP';";
-    $consulta = mysqli_query($conexao, $sql);
-    $resultado = mysqli_num_rows($consulta);
-    if (mysqli_num_rows($consulta) > 0) {
-        echo "acesso liberado";
-        session_start();
-        $_SESSION['usuario'] = $usuarioP;
-        $_SESSION['senha'] = $senhaP;
-        header("Location: menu.php");
+    if (empty($usuarioP) || empty($senhaP)) {
+        echo "Por favor, preencha todos os campos.";
     } else {
-        echo "acesso negado";
+  
+        $sql = "SELECT * FROM tb_login WHERE usuario = '$usuarioP' AND senha = '$senhaP';";
+        $consulta = mysqli_query($conexao, $sql);
+        $resultado = mysqli_num_rows($consulta);
+
+        if ($resultado > 0) {
+            echo "acesso liberado";
+            session_start();
+            $_SESSION['usuario'] = $usuarioP;
+            $_SESSION['senha'] = $senhaP;
+            header("Location: menu.php");
+        } else {
+            echo "acesso negado";
+        }
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

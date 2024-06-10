@@ -15,7 +15,13 @@ search.addEventListener("keydown", function (event) {
 
 function searchData() {
   search = document.getElementById('pesquisar');
-  window.location = 'exibir_admin.php?search=' + search.value;
+  const currentUrl = window.location.pathname;
+
+  if (currentUrl.includes('exibir_admin.php')) {
+    window.location = 'exibir_admin.php?search=' + search.value;
+  } else if (currentUrl.includes('exibir.php')) {
+    window.location = 'exibir.php?search=' + search.value;
+  }
 }
 
 function openModal() {
@@ -29,7 +35,6 @@ function openModal() {
 }
 
 function openModal2(obj) {
-
   obj.onclick = e => {
     if (e.target.className.indexOf('modal-container') !== -1) {
       obj.classList.remove('active');

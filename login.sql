@@ -13,17 +13,24 @@ CREATE TABLE tb_item (
 
 CREATE TABLE tb_login(
 	usuario_id INT NOT NULL AUTO_INCREMENT,
-	usuario VARCHAR (50),
-	senha VARCHAR (40),
+	usuario VARCHAR(50) NOT NULL,
+	senha VARCHAR(40) NOT NULL,
 	tipo CHAR(1) DEFAULT 'U',
 	PRIMARY KEY(usuario_id)
 );
 
+ALTER TABLE tb_login 
+MODIFY usuario VARCHAR(50) NOT NULL,
+MODIFY senha VARCHAR(40) NOT NULL,
+ADD CONSTRAINT CHK_usuario CHECK (usuario != ''),
+ADD CONSTRAINT CHK_senha CHECK (senha != '');
+
 INSERT INTO tb_login(usuario, senha, tipo)
 VALUES 
-('admin'  , ('admin'), 'A'),
+('admin', SHA1('admin'), 'A'),
 ('usuario@local.com', SHA1('123'), 'U');
 
 SELECT * FROM tb_login;
+
 
 		 		 			          

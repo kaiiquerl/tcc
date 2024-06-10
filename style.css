@@ -339,18 +339,8 @@ nav ul li:hover .sub_menu {
 }
 
 footer {
-    background-color: #0e4768;
-    padding: 1rem 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #dee2e6;
-}
-
-footer {
-    background-color: #0e4768;
+    background-color: #516ead;
+    height: 300px;
     padding: 1rem 0;
     width: 100%;
     display: flex;
@@ -386,23 +376,18 @@ footer {
 }
 
 .footer-bottom {
-    background-color: #b31f98;
-    padding: 0.5rem 0;
+    background-color:  #5096fff5;
+    padding: 1.7rem 0;
     color: rgb(1, 18, 255);
 }
 
 
 
 .footer-divider {
-    border: 200;
-    border-top: 1px solid #ed07fd;
-    margin: 0;
-    padding: 1000;
-    margin-top: -8px;
+    border: 1000px;
+    border-top: 10px solid rgb(0, 0, 0);
+    margin-top: 25px;
 }
-
-
-
 
 .h1e{
     color: rgba(255, 255, 255, 0.91);
@@ -465,3 +450,20 @@ main section {
     justify-content: center;
     gap: .1%;
 }
+
+.meuBotao {
+    transition: transform 0.2s; /* Adiciona uma transição suave para a mudança de transformação */
+    padding: 10px 20px; /* Apenas para dar algum espaço ao redor do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+.meuBotao:hover {
+    transform: translateY(-5px); /* Quando o mouse passa sobre o botão, ele é deslocado para cima */
+    cursor: pointer; /* Altera o cursor quando o mouse passa sobre o botão */
+}
+
+
