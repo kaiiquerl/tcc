@@ -196,6 +196,19 @@ body * {
     text-align: center;
 }
 
+.erro {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+
+
 @media only screen and (max-width: 950px) {
     .card-login {
         width: 85%;

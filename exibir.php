@@ -80,7 +80,7 @@ if (isset($_GET['excluir'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exibir</title>
-  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="exibir.css">
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <style>
     a {
