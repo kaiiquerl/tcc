@@ -381,13 +381,18 @@ footer {
     color: rgb(1, 18, 255);
 }
 
-
-
 .footer-divider {
     border: 1000px;
     border-top: 10px solid rgb(0, 0, 0);
     margin-top: 25px;
 }
+
+.logos{
+    width: 16px; 
+    height: 16px;
+    fill: black;
+}
+
 
 .h1e{
     color: rgba(255, 255, 255, 0.91);
@@ -462,8 +467,7 @@ main section {
 }
 
 .meuBotao:hover {
-    transform: translateY(-5px); /* Quando o mouse passa sobre o botão, ele é deslocado para cima */
-    cursor: pointer; /* Altera o cursor quando o mouse passa sobre o botão */
+    transform: translateY(-5px); 
+    cursor: pointer;
 }
-
 
