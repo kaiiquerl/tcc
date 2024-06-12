@@ -18,7 +18,7 @@
     flex: 1;
     display: flex;
     justify-content: flex-start; /* Alinha a logo à esquerda do centro */
-    margin-right: 0%; /* Ajusta a posição da logo para a esquerda */
+    margin-left: 0%; /* Ajusta a posição da logo para a esquerda */
 }
 
 .headerimg img {
@@ -258,7 +258,7 @@ body * {
     width: 90px;
     height: 90px;
     margin-top: auto;
-    margin-left: 200px;
+    margin-left: 0px;
 }
 
 
@@ -478,7 +478,7 @@ main section {
   
   
 
-.meuBotao {
+#meuBotao {
     transition: transform 0.2s; /* Adiciona uma transição suave para a mudança de transformação */
     padding: 10px 20px; /* Apenas para dar algum espaço ao redor do botão */
     font-size: 16px; /* Tamanho da fonte */
@@ -488,8 +488,36 @@ main section {
     border-radius: 5px; /* Borda arredondada */
 }
 
-.meuBotao:hover {
+#meuBotao:hover {
     transform: translateY(-5px); 
     cursor: pointer;
 }
+
+.txtlogo{
+    font-size: 40px;
+    box-shadow: 0px 10px 40px -4px #5096fff5;
+    border-radius: 20px;
+}
+
+.cortxt{
+  color:#a2c8e7
+  
+    
+}
+
+.imgmenu{
+display: flex;
+
+}
+
+.cortxt:hover .overlay {
+    opacity: 1;
+}
+
+#movimentacao{
+      transform: translateY(-5px); 
+    cursor: pointer;
+}
+
+
 
