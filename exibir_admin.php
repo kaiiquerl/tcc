@@ -216,16 +216,16 @@ if (isset($_GET['excluir'])) {
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="C">C</option>
-            </select><br>
-            <?= $dados["bloco"] ?>' /> 
+            <select><br>
+           
 
             <br><label for="escolhas">Escolha o Lab:</label>
             <select name="txt_sala" id="txt_sala">
               <option value="LAB 1">LAB 1</option>
               <option value="LAB 2">LAB 2</option>
               <option value="LAB 3">LAB 3</option>
-            </select><br>
-            <?= $dados["sala"] ?>' /> 
+            <select><br>
+            
 
             <br><label for="txt_observacao">Observação</label>
             <input name="txt_observacao" type="text" required value='<?= $dados["observacao"] ?>' />
