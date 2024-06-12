@@ -5,28 +5,23 @@ include_once "conexao.php";
 
 if (!empty($_GET['bloco'])) {
   $bloco_label = @$_GET['bloco'];
- $_SESSION["blocoL"] = $bloco_label;
+  $_SESSION["blocoL"] = $bloco_label;
   $lab_label = @$_GET['lab'];
- $_SESSION["labL"] = $lab_label;
-  echo ''.$_SESSION[""];
+  $_SESSION["labL"] = $lab_label;
+  echo '' . $_SESSION[""];
 }
 
+// if (isset($_POST['txt_bloco']) && isset($_POST['txt_sala'])) {
+//     $bloco_label = $_POST['txt_bloco'];
+//     $lab_label   = $_POST['txt_sala'];
+// }
 
-
-if (!$bloco_label) {
-  $bloco_label = @$_POST['txt_bloco'];
+if (!empty($_GET['search'])) {
+  $data = $_GET['search'];
+  $sql = "SELECT * FROM tb_item WHERE (codigo_patrimonio LIKE '%$data%' or descricao LIKE '%$data%' or observacao LIKE '%$data%') AND (bloco = '" . $_SESSION["blocoL"] . "' AND sala = '" . $_SESSION["labL"] . "') ORDER BY codigo_patrimonio DESC";
+} else {
+  $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio WHERE bloco = '" . $_SESSION["blocoL"] . "' AND sala = '" . $_SESSION["labL"] . "' DESC";
 }
-if (!$lab_label) {
-  $lab_label = @$_POST['txt_sala'];
-}
-
-  if (!empty($_GET['search'])) {
-    $data = $_GET['search'];
-    $sql = "SELECT * FROM tb_item WHERE (codigo_patrimonio LIKE '%$data%' or descricao LIKE '%$data%' or observacao LIKE '%$data%') AND (bloco = '" .$_SESSION["blocoL"] . "' AND sala = '" .$_SESSION["labL"] . "') ORDER BY codigo_patrimonio DESC";
-  } else {
-    $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio WHERE bloco = '" .$_SESSION["blocoL"] . "' AND sala = '" .$_SESSION["labL"] . "' DESC";
-  }
-
 
 if (isset($_POST['btnSalvar'])) {
   $codigo = $_POST['txt_codigo'];
@@ -35,11 +30,11 @@ if (isset($_POST['btnSalvar'])) {
   $sala = $_POST['txt_sala'];
   $observacao = $_POST['txt_observacao'];
 
-
-
   $insert = "INSERT INTO tb_item (codigo_patrimonio, descricao, bloco, sala, observacao) VALUES ('$codigo','$descricao','$bloco','$sala','$observacao');";
   $sql1 = "SELECT * FROM tb_item WHERE codigo_patrimonio = '$codigo'";
+
   $verifica = mysqli_query($conexao, $sql1);
+
   if (mysqli_num_rows($verifica) == 0) {
     if (mysqli_query($conexao, $insert)) {
       echo "";
@@ -55,8 +50,11 @@ if (isset($_POST['btnAtualizar'])) {
   $observacao = $_POST['txt_observacao'];
 
   $update = "UPDATE tb_item SET descricao = '$descricao', bloco = '$bloco', sala = '$sala', observacao = '$observacao' WHERE codigo_patrimonio=$codigo";
+
   $sql1 = "SELECT * FROM tb_item WHERE codigo_patrimonio = '$codigo'";
+
   $verifica = mysqli_query($conexao, $sql1);
+
   if (mysqli_num_rows($verifica) == 1) {
     if (mysqli_query($conexao, $update)) {
       echo "";
@@ -104,13 +102,15 @@ if (isset($_GET['excluir'])) {
       <div class="box-search">
 
         <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
-        <button onclick="searchData()" class="btns btn-primary" name="btnpesquisar">
-        <img src="img/search.svg" class="logos" alt="img search">
+
+        <button onclick='searchData("<?=$_GET['bloco']?>", "<?=$_GET['lab']?>")' class="btns btn-primary" name="btnpesquisar">
+          <img src="img/search.svg" class="logos" alt="img search">
           </svg>
         </button>
 
       </div>
 
+      <button onclick='limpar("<?=$_GET['bloco']?>", "<?=$_GET['lab']?>")' id="btnLimpar">Limpar</button>
       <button onclick="openModal()" id="new">Incluir</button>
     </div>
 
@@ -127,10 +127,12 @@ if (isset($_GET['excluir'])) {
           </tr>
           <?php
           if ($data == "") {
-            $sql = "SELECT * FROM tb_item WHERE bloco = '$bloco_label' AND sala = '$lab_label' ORDER BY codigo_patrimonio;";
+            $sql = "SELECT * FROM tb_item WHERE bloco = '$bloco_label' AND sala = '$lab_label' ORDER BY codigo_patrimonio";
+            //$sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio";
           }
-         
+
           $resultado = mysqli_query($conexao, $sql);
+
           while ($dados = mysqli_fetch_assoc($resultado)) {
             echo '
                      <tr>
@@ -216,22 +218,21 @@ if (isset($_GET['excluir'])) {
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="C">C</option>
-            <select><br>
-           
+              <select><br>
 
-            <br><label for="escolhas">Escolha o Lab:</label>
-            <select name="txt_sala" id="txt_sala">
-              <option value="LAB 1">LAB 1</option>
-              <option value="LAB 2">LAB 2</option>
-              <option value="LAB 3">LAB 3</option>
-            <select><br>
-            
 
-            <br><label for="txt_observacao">Observação</label>
-            <input name="txt_observacao" type="text" required value='<?= $dados["observacao"] ?>' />
+                <br><label for="escolhas">Escolha o Lab:</label>
+                <select name="txt_sala" id="txt_sala">
+                  <option value="LAB 1">LAB 1</option>
+                  <option value="LAB 2">LAB 2</option>
+                  <option value="LAB 3">LAB 3</option>
+                  <select><br>
 
-            <button type="submit" name="btnAtualizar">Atualizar</button>
-            <button type="button" onclick="fecharModal2()">Cancelar</button>
+                    <br><label for="txt_observacao">Observação</label>
+                    <input name="txt_observacao" type="text" required value='<?= $dados["observacao"] ?>' />
+
+                    <button type="submit" name="btnAtualizar">Atualizar</button>
+                    <button type="button" onclick="fecharModal2()">Cancelar</button>
           </form>
 
         </div>

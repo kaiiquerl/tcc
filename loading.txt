@@ -4,5 +4,4 @@ mensagens de texto/confirmação excluir e alterar
 rolagem descricao
 *sobre
 voltar quando filtrar
-corrigir fazer cadastro em branco
 recraft

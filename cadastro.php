@@ -59,6 +59,7 @@ if (isset($_POST['btn_login'])) {
                     </div>
                     <div class="btn2">
                         <button class="btn-cadastrar2" name="btn_cadastrar">Cadastrar</button>
+                        <a href="login.php" class="btn-cadastrar2" >Voltar</a>
                     </div>
                 </form>
             </div>
