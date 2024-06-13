@@ -6,6 +6,7 @@
     align-items: center;
     padding: 10px; /* Ajuste conforme necessário */
     border-bottom: 2px solid #000000;
+    background-color:#a2c8e7
 }
 
 .welcome-text {
@@ -311,6 +312,7 @@ nav ul li a {
 
 nav ul li:hover .sub_menu {
     display: block;
+    
 }
 
 .sub_menu {
@@ -353,7 +355,7 @@ nav ul li:hover .sub_menu {
 }
 
 footer {
-    background-color: #516ead;
+    background-color: #a2c8e7;
     height: 300px;
     padding: 1rem 0;
     width: 100%;
@@ -390,14 +392,14 @@ footer {
 }
 
 .footer-bottom {
-    background-color:  #5096fff5;
+    background-color:  #a2c8e7;
     padding: 1.7rem 0;
-    color: rgb(1, 18, 255);
+    color: rgb(255, 255, 255);
 }
 
 .footer-divider {
     border: 1000px;
-    border-top: 10px solid rgb(0, 0, 0);
+    border-top: 10px solid rgb(255, 255, 255);
     margin-top: 25px;
 }
 
@@ -494,16 +496,22 @@ main section {
 }
 
 .txtlogo{
-    font-size: 40px;
-    box-shadow: 0px 10px 40px -4px #5096fff5;
-    border-radius: 20px;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 400px #ffffff, 0 0 70px #fdfffd, 0 0 800px #ffffff, 0 0 500px #ffffff, 0 0 1000px #ffffff; /* Sombra do texto */
+    color: white;
 }
 
 .cortxt{
-  color:#a2c8e7
-  
-    
+  color:#ffffff 
 }
+
+.cortxt2{
+    color:#ffffff
+  }
+
+  .cortxt2:hover{
+    transform: translateY(-10px); 
+      cursor: pointer;
+  }
 
 .imgmenu{
 display: flex;
@@ -516,8 +524,17 @@ display: flex;
 
 #movimentacao{
       transform: translateY(-5px); 
-    cursor: pointer;
+      cursor: pointer;
 }
 
+.fundocor{
+    background-color: #a2c8e7;
+}
 
+#fundocor{
+    background-color: #a2c8e7;
+}
 
+.fundo{
+background-image: url(img/fundomenu.jpg);
+}

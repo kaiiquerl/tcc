@@ -19,7 +19,7 @@ include_once "conexao.php";
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="fundo">
     <header class="header">
          <div class="headerimg">
             <img src="img/logo.svg" class="logoM" alt="logop">
@@ -32,10 +32,10 @@ include_once "conexao.php";
        
 
         <ul class="nav nav-pills"> 
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Home</a></li><br>
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Sobre</a></li>
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Contato</a></li>
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Serviço</a></li>
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Home</a></li>&nbsp;
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Sobre</a></li>&nbsp;
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Contato</a></li>&nbsp;
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Serviço</a></li>&nbsp;
             
         </ul>
     </header>
@@ -51,49 +51,49 @@ include_once "conexao.php";
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                    <h5 class="txtbloco"><h1 class="cortxt">Bloco A</h1></h5>
+                    <h5 class="txtbloco"><h1 class="cortxt2">Bloco A</h1></h5>
                 </button>
                 <div class="collapse show" id="home-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="exibir.php?bloco=A&lab=LAB 1"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt">Lab 1</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 1</h3></a></li>
                         <li><a href="exibir.php?bloco=A&lab=LAB 2"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt">Lab 2</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 2</h3></a></li>
                         <li><a href="exibir.php?bloco=A&lab=LAB 3"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt">Lab 3</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 3</h3></a></li>
                     </ul>
                 </div>
             </li>
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                    <h5 class="txtbloco"><h1 id="movimentacao" class="cortxt">Bloco B</h1></h5>
+                    <h5 class="txtbloco"><h1 id="movimentacao" class="cortxt2">Bloco B</h1></h5>
                 </button>
                 <div class="collapse" id="dashboard-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="exibir.php?bloco=B&lab=LAB 1"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt">Lab 1</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 1</h3></a></li>
                         <li><a href="exibir.php?bloco=B&lab=LAB 2"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt">Lab 2</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 2</h3></a></li>
                         <li><a href="exibir.php?bloco=B&lab=LAB 3"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt">Lab 3</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 3</h3></a></li>
                     </ul>
                 </div>
             </li>
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                    <h5 class="txtbloco"><h1 class="cortxt">Bloco C</h1></h5>
+                    <h5 class="txtbloco"><h1 class="cortxt2">Bloco C</h1></h5>
                     
                 </button>
                 <div class="collapse" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="exibir.php?bloco=C&lab=LAB 1"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 id="item" class="cortxt">Lab 1</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 id="item" class="cortxt2">Lab 1</h3></a></li>
                         <li><a href="exibir.php?bloco=C&lab=LAB 2"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt">Lab 2</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 2</h3></a></li>
                         <li><a href="exibir.php?bloco=C&lab=LAB 3"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt">Lab 3</h3></a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 3</h3></a></li>
                     </ul>
                 </div>
             </li>
@@ -101,9 +101,9 @@ include_once "conexao.php";
         </ul>
 
         <div class="container my-5">
-            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div id="fundocor" class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
                 
-                <div style="display: flex;">
+                <div class="fundocor" style="display: flex;">
                 <div style="width: 80%;">  
                   <h1 class="display-4 fw-bold lh-1 text-body-emphasis"><h1 class="cortxt">SCHOOL STOCK</h1></h1>
                     <p class="cortxt">Somos uma empresa líder em inventários, destacando-nos pela inovação e excelência.
@@ -201,7 +201,6 @@ include_once "conexao.php";
         <span class="mb-3 mb-md-0 text-body-secondary"></span>
     </div>
  
-     <h5 class="meuBotao">SOBRE</h5>
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex footer-links">
         <li class="nav-item">
             <h1 class="h1e">
