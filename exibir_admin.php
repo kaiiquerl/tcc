@@ -5,10 +5,10 @@ include_once "conexao.php";
 
 if (!empty($_GET['bloco'])) {
   $bloco_label = @$_GET['bloco'];
- $_SESSION["blocoL"] = $bloco_label;
+  $_SESSION["blocoL"] = $bloco_label;
   $lab_label = @$_GET['lab'];
- $_SESSION["labL"] = $lab_label;
-  echo ''.$_SESSION[""];
+  $_SESSION["labL"] = $lab_label;
+  echo '' . $_SESSION[""];
 }
 
 
@@ -20,12 +20,12 @@ if (!$lab_label) {
   $lab_label = @$_POST['txt_sala'];
 }
 
-  if (!empty($_GET['search'])) {
-    $data = $_GET['search'];
-    $sql = "SELECT * FROM tb_item WHERE (codigo_patrimonio LIKE '%$data%' or descricao LIKE '%$data%' or observacao LIKE '%$data%') AND (bloco = '" .$_SESSION["blocoL"] . "' AND sala = '" .$_SESSION["labL"] . "') ORDER BY codigo_patrimonio DESC";
-  } else {
-    $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio WHERE bloco = '" .$_SESSION["blocoL"] . "' AND sala = '" .$_SESSION["labL"] . "' DESC";
-  }
+if (!empty($_GET['search'])) {
+  $data = $_GET['search'];
+  $sql = "SELECT * FROM tb_item WHERE (codigo_patrimonio LIKE '%$data%' or descricao LIKE '%$data%' or observacao LIKE '%$data%') AND (bloco = '" . $_SESSION["blocoL"] . "' AND sala = '" . $_SESSION["labL"] . "') ORDER BY codigo_patrimonio DESC";
+} else {
+  $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio WHERE bloco = '" . $_SESSION["blocoL"] . "' AND sala = '" . $_SESSION["labL"] . "' DESC";
+}
 
 
 if (isset($_POST['btnSalvar'])) {
@@ -71,6 +71,7 @@ if (isset($_GET['excluir'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -78,7 +79,7 @@ if (isset($_GET['excluir'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exibir</title>
+  <title>exibir_admin</title>
   <link rel="stylesheet" href="exibir.css">
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <style>
@@ -99,7 +100,7 @@ if (isset($_GET['excluir'])) {
 
   <div class="container">
 
-    <div class="header">
+  <div class="header">
       <span>Cadastro de Funcionários</span>
       <div class="box-search">
 
@@ -129,7 +130,7 @@ if (isset($_GET['excluir'])) {
           if ($data == "") {
             $sql = "SELECT * FROM tb_item WHERE bloco = '$bloco_label' AND sala = '$lab_label' ORDER BY codigo_patrimonio;";
           }
-         
+
           $resultado = mysqli_query($conexao, $sql);
           while ($dados = mysqli_fetch_assoc($resultado)) {
             echo '
@@ -148,7 +149,7 @@ if (isset($_GET['excluir'])) {
                                  Alterar
                              </a>
                          </td>
-                     <tr>                    
+                     <tr>
                      ';
           }
           ?>
@@ -166,7 +167,7 @@ if (isset($_GET['excluir'])) {
           <label for="txt_codigo">Codigo</label>
           <input name="txt_codigo" type="number" required />
 
-          <label for="txt_descricao">Descrição</label>
+          <label for="txt_descricao">Descição</label>
           <input name="txt_descricao" type="text" required />
 
           <label for="escolhas">Escolha o Bloco:</label>
@@ -199,7 +200,7 @@ if (isset($_GET['excluir'])) {
       $sql = "SELECT * FROM tb_item WHERE codigo_patrimonio =  '$alterar';";
       $consulta = mysqli_query($conexao, $sql);
       $dados = mysqli_fetch_array($consulta);
-    ?>
+      ?>
 
       <div class="modal-container active" id="modal_edit" onclick="openModal2(this)">
         <div class="modal">
@@ -217,7 +218,7 @@ if (isset($_GET['excluir'])) {
               <option value="B">B</option>
               <option value="C">C</option>
             </select><br>
-            <?= $dados["bloco"] ?>' /> 
+            <?= $dados["bloco"] ?>' />
 
             <br><label for="escolhas">Escolha o Lab:</label>
             <select name="txt_sala" id="txt_sala">
@@ -225,7 +226,7 @@ if (isset($_GET['excluir'])) {
               <option value="LAB 2">LAB 2</option>
               <option value="LAB 3">LAB 3</option>
             </select><br>
-            <?= $dados["sala"] ?>' /> 
+            <?= $dados["sala"] ?>
 
             <br><label for="txt_observacao">Observação</label>
             <input name="txt_observacao" type="text" required value='<?= $dados["observacao"] ?>' />
@@ -236,12 +237,11 @@ if (isset($_GET['excluir'])) {
 
         </div>
       </div>
-    <?php
+      <?php
     }
     ?>
   </div>
-  <script src="script.js">
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>

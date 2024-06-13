@@ -1,7 +1,6 @@
 const modal = document.getElementById('modal_insert');
 const tbody = document.querySelector('tbody');
 const btnSalvar = document.querySelector('#btnSalvar');
-const btnLimpar = document.getElementById('#btnLimpar');
 
 let itens;
 let id;
@@ -14,21 +13,15 @@ search.addEventListener("keydown", function (event) {
   }
 });
 
-function searchData(bloco, lab) {
+function searchData() {
   search = document.getElementById('pesquisar');
   const currentUrl = window.location.pathname;
 
   if (currentUrl.includes('exibir_admin.php')) {
-    window.location = 'exibir_admin.php?bloco=' + bloco + '&lab=' + lab + '&search=' + search.value;
-    btnLimpar.style.display = 'block';
+    window.location = 'exibir_admin.php?search=' + search.value;
   } else if (currentUrl.includes('exibir.php')) {
     window.location = 'exibir.php?search=' + search.value;
   }
-}
-
-function limpar(bloco, lab) {
-  window.location = 'exibir_admin.php?bloco=' + bloco + '&lab=' + lab;
-  btnLimpar.style.display = 'none';
 }
 
 function openModal() {
