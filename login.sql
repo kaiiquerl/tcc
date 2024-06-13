@@ -30,7 +30,9 @@ VALUES
 ('admin', SHA1('admin'), 'A'),
 ('usuario@local.com', SHA1('123'), 'U');
 
+INSERT INTO tb_item(codigo_patrimonio,descricao,bloco,sala ,observacao) VALUES
+('1346141','pc','B','LAB 3','ok');
+
+SELECT * FROM tb_item;
 SELECT * FROM tb_login;
 
-
-		 		 			          
