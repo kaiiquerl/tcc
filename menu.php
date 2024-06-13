@@ -26,7 +26,7 @@ include_once "conexao.php";
         </div>
         <a
             class="welcome-text d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <h1 class="txtlogo">𝔹𝕖𝕞-𝕧𝕚𝕟𝕕𝕠 𝕒̀ 𝕊ℂℍ𝕆𝕆𝕃 𝕊𝕋𝕆ℂ𝕂</h1>
+            <h1 class="txtlogo">𝔹𝕖𝕞-𝕧𝕚𝕟𝕕𝕠 𝕒 𝕊ℂℍ𝕆𝕆𝕃 𝕊𝕋𝕆ℂ𝕂</h1>
         </a>
 
        

@@ -19,75 +19,81 @@ include_once "conexao.php";
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            BEM VINDO
+<body class="fundo">
+    <header class="header">
+         <div class="headerimg">
+            <img src="img/logo.svg" class="logoM" alt="logop">
+        </div>
+        <a
+            class="welcome-text d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <h1 class="txtlogo">𝔹𝕖𝕞-𝕧𝕚𝕟𝕕𝕠 𝕒 𝕊ℂℍ𝕆𝕆𝕃 𝕊𝕋𝕆ℂ𝕂</h1>
         </a>
 
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page">Log Out</a></li>
+       
+
+        <ul class="nav nav-pills"> 
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Home</a></li>&nbsp;
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Sobre</a></li>&nbsp;
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Contato</a></li>&nbsp;
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Serviço</a></li>&nbsp;
+            
         </ul>
     </header>
+
+
 
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         </ul>
     </div>
-
-    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-        <svg class="bi pe-none me-2" width="30" height="24">
-        </svg>
-    </a>
 
     <div class="container_menu">
         <ul class="list-unstyled ps-0">
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                    Bloco A
+                    <h5 class="txtbloco"><h1 class="cortxt2">Bloco A</h1></h5>
                 </button>
                 <div class="collapse show" id="home-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="exibir_admin.php?bloco=A&lab=LAB 1"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 1</h3></a></li>
                         <li><a href="exibir_admin.php?bloco=A&lab=LAB 2"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 2</h3></a></li>
                         <li><a href="exibir_admin.php?bloco=A&lab=LAB 3"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 3</h3></a></li>
                     </ul>
                 </div>
             </li>
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                    Bloco B
+                    <h5 class="txtbloco"><h1 id="movimentacao" class="cortxt2">Bloco B</h1></h5>
                 </button>
                 <div class="collapse" id="dashboard-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="exibir_admin.php?bloco=B&lab=LAB 1"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 1</h3></a></li>
                         <li><a href="exibir_admin.php?bloco=B&lab=LAB 2"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 2</h3></a></li>
                         <li><a href="exibir_admin.php?bloco=B&lab=LAB 3"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 3</h3></a></li>
                     </ul>
                 </div>
             </li>
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                    Bloco C
+                    <h5 class="txtbloco"><h1 class="cortxt2">Bloco C</h1></h5>
+                    
                 </button>
                 <div class="collapse" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="exibir_admin.php?bloco=C&lab=LAB 1"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 1</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 id="item" class="cortxt2">Lab 1</h3></a></li>
                         <li><a href="exibir_admin.php?bloco=C&lab=LAB 2"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 2</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 2</h3></a></li>
                         <li><a href="exibir_admin.php?bloco=C&lab=LAB 3"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lab 3</a></li>
+                                class="link-body-emphasis d-inline-flex text-decoration-none rounded"><h3 class="cortxt2">Lab 3</h3></a></li>
                     </ul>
                 </div>
             </li>
@@ -95,22 +101,31 @@ include_once "conexao.php";
         </ul>
 
         <div class="container my-5">
-            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-                <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis">SCHOOL STOCK</h1>
-                    <p class="lead">.........</p>
+            <div id="fundocor" class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                
+                <div class="fundocor" style="display: flex;">
+                <div style="width: 80%;">  
+                  <h1 class="display-4 fw-bold lh-1 text-body-emphasis"><h1 class="cortxt">SCHOOL STOCK</h1></h1>
+                    <p class="cortxt">Somos uma empresa líder em inventários, destacando-nos pela inovação e excelência.
+                        Oferecemos serviços de Inventário Patrimonial que garantem a identificação completa dos ativos
+                        da sua empresa, permitindo ajustes contábeis e saneamento de irregularidades, se necessário.
+                        Conte conosco para soluções precisas e confiáveis, que atendem e superam suas expectativas,
+                        garantindo a integridade do seu patrimônio.</p>
+                  </div>  
+                        <img class="" src="img/sejabemvindo.svg" alt="gif" width="40%">
+                    </div> 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
 
                     </div>
-                </div>
-                <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                    <img class="rounded-lg-3" src="bootstrap-docs.png" alt="" width="720">
-                </div>
+                
+
             </div>
         </div>
 
     </div>
+
     </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29554.940917036813!2d-46.757523023047156!3d-22.188131544728048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9b4d65170a803%3A0x137e9546a5f2f2b0!2sEscola%20T%C3%A9cnica%20Estadual%20Carolino%20da%20Motta%20e%20Silva!5e0!3m2!1spt-BR!2sbr!4v1718068898208!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
 
@@ -174,28 +189,45 @@ include_once "conexao.php";
         </symbol>
     </svg>
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Company, Inc</span>
-        </div>
 
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#twitter" />
-                    </svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#instagram" />
-                    </svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#facebook" />
-                    </svg></a></li>
-        </ul>
-    </footer>
+
+
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <a class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <img src="img/logo_footer.svg" class="logof" alt="img footer">
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary"></span>
+    </div>
+ 
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex footer-links">
+        <li class="nav-item">
+            <h1 class="h1e">
+            <img src="img/email.svg" class="logos" alt="img email">
+                </svg> E-mails:
+                Diretoria: e047dir@cps.sp.gov.br
+                <br>Diretoria Administrativa: e047adm@cps.sp.gov.br
+                <br>Diretoria Acadêmica: e047acad@cps.sp.gov.br
+                <br><br>
+                <img src="img/telefone.svg" class="logos" alt="img telefone">
+                </svg> Tel.: (19) 3651-1229
+                <br><br>
+                <img src="img/gps.svg" class="logos" alt="img gps">
+                </svg> Localização: Rodovia SP, 346 - km 204 - Morro Azul - CEP: 13990-000 - Espirito Santo do Pinhal/SP
+            </h1>
+        </li>
+    </ul>
+    <hr class="footer-divider w-100" style="margin-bottom: -40px;"><br>
+    <div class="w-100 text-center mt-4 footer-bottom">
+       
+        <p>&copy; 2018, All Right Reserved Anup</p>
+    </div>
+</footer>
+
+
+
+
 
     <script src="../assets/js/color-modes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
