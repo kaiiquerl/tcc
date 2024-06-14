@@ -217,7 +217,7 @@ include_once "conexao.php";
     <hr class="footer-divider w-100" style="margin-bottom: -40px;"><br>
     <div class="w-100 text-center mt-4 footer-bottom">
        
-        <p>&copy; 2018, All Right Reserved Anup</p>
+        <p>&copy; Todos os Direitos Reservados...</p>
     </div>
 </footer>
 

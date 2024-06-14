@@ -27,8 +27,8 @@ ADD CONSTRAINT CHK_senha CHECK (senha != '');
 
 INSERT INTO tb_login(usuario, senha, tipo)
 VALUES 
-('admin', SHA1('admin'), 'A'),
-('usuario@local.com', SHA1('123'), 'U');
+('admin',('admin'), 'A'),
+('usuario',('usuario'), 'U');
 
 INSERT INTO tb_item(codigo_patrimonio,descricao,bloco,sala ,observacao) VALUES
 ('1346141','pc','B','LAB 3','ok');
