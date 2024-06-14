@@ -105,12 +105,7 @@ include_once "conexao.php";
                 
                 <div class="fundocor" style="display: flex;">
                 <div style="width: 80%;">  
-                  <h1 class="display-4 fw-bold lh-1 text-body-emphasis"><h1 class="cortxt">SCHOOL STOCK</h1></h1>
-                    <p class="cortxt">Somos uma empresa líder em inventários, destacando-nos pela inovação e excelência.
-                        Oferecemos serviços de Inventário Patrimonial que garantem a identificação completa dos ativos
-                        da sua empresa, permitindo ajustes contábeis e saneamento de irregularidades, se necessário.
-                        Conte conosco para soluções precisas e confiáveis, que atendem e superam suas expectativas,
-                        garantindo a integridade do seu patrimônio.</p>
+                  <h1 class="display-4 fw-bold lh-1 text-body-emphasis"><h1 class="cortxt">Bem-vindos ao School Stock! Aqui, você pode registrar e gerenciar todos os patrimônios da sua escola de forma simples e eficiente. Estamos prontos para ajudar sua instituição a manter um inventário organizado. Explore nossa plataforma e simplifique sua gestão patrimonial conosco!</p>
                   </div>  
                         <img class="" src="img/sejabemvindo.svg" alt="gif" width="40%">
                     </div> 
