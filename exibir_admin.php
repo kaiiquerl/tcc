@@ -101,7 +101,7 @@ if (isset($_GET['excluir'])) {
   <div class="container">
 
   <div class="header">
-      <span>Cadastro de Funcionários</span>
+      <span>Cadastro de Itens</span>
       <div class="box-search">
 
         <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">

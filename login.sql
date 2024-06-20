@@ -30,8 +30,16 @@ VALUES
 ('admin',('admin'), 'A'),
 ('usuario',('usuario'), 'U');
 
-INSERT INTO tb_item(codigo_patrimonio,descricao,bloco,sala ,observacao) VALUES
-('1346141','pc','B','LAB 3','ok');
+INSERT INTO tb_item(codigo_patrimonio, descricao, bloco, sala, observacao) VALUES
+('1346141','pc','B','LAB 3','ok'),
+('7587459','tv','A','LAB 2','com defeito'),
+('9894244','monitor','C','LAB 1','riscado'),
+('5854727','data show','B','LAB 1','ok'),
+('4327489','pc','B','LAB 3','ok'),
+('2174364','pc','B','LAB 3','ok'),
+('3143782','pc','B','LAB 3','ok'),
+('8432764','pc','B','LAB 3','ok');
+
 
 SELECT * FROM tb_item;
 SELECT * FROM tb_login;
