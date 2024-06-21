@@ -32,11 +32,8 @@ include_once "conexao.php";
        
 
         <ul class="nav nav-pills"> 
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Home</a></li>&nbsp;
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Log Out</a></li>&nbsp;
             <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Sobre</a></li>&nbsp;
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Contato</a></li>&nbsp;
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Serviço</a></li>&nbsp;
-            
         </ul>
     </header>
 
