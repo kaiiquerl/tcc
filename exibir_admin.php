@@ -218,7 +218,6 @@ if (isset($_GET['excluir'])) {
               <option value="B">B</option>
               <option value="C">C</option>
             </select><br>
-            <?= $dados["bloco"] ?>' />
 
             <br><label for="escolhas">Escolha o Lab:</label>
             <select name="txt_sala" id="txt_sala">
@@ -226,7 +225,6 @@ if (isset($_GET['excluir'])) {
               <option value="LAB 2">LAB 2</option>
               <option value="LAB 3">LAB 3</option>
             </select><br>
-            <?= $dados["sala"] ?>
 
             <br><label for="txt_observacao">Observação</label>
             <input name="txt_observacao" type="text" required value='<?= $dados["observacao"] ?>' />
