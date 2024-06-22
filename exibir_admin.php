@@ -20,13 +20,22 @@ if (!$lab_label) {
   $lab_label = @$_POST['txt_sala'];
 }
 
-if (!empty($_GET['search'])) {
+if (!empty($_GET['search']) ) {
   $data = $_GET['search'];
   $sql = "SELECT * FROM tb_item WHERE (codigo_patrimonio LIKE '%$data%' or descricao LIKE '%$data%' or observacao LIKE '%$data%') AND (bloco = '" . $_SESSION["blocoL"] . "' AND sala = '" . $_SESSION["labL"] . "') ORDER BY codigo_patrimonio DESC";
 } else {
   $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio WHERE bloco = '" . $_SESSION["blocoL"] . "' AND sala = '" . $_SESSION["labL"] . "' DESC";
 }
 
+//****************************** */
+/*
+if (!empty($_GET['valor']) ) {
+  $valor = $_GET['search'];
+  $sql = "SELECT * FROM tb_item WHERE (codigo_patrimonio LIKE '%$data%' or descricao LIKE '%$data%' or observacao LIKE '%$data%') AND (bloco = '" . $_SESSION["blocoL"] . "' AND sala = '" . $_SESSION["labL"] . "') ORDER BY codigo_patrimonio DESC";
+} else {
+  $sql = "SELECT * FROM tb_item ORDER BY codigo_patrimonio WHERE bloco = '" . $_SESSION["blocoL"] . "' AND sala = '" . $_SESSION["labL"] . "' DESC";
+}
+//********************************************** */
 
 if (isset($_POST['btnSalvar'])) {
   $codigo = $_POST['txt_codigo'];
@@ -104,7 +113,8 @@ if (isset($_GET['excluir'])) {
       <span>Cadastro de Itens</span>
       <div class="box-search">
 
-        <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
+        <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar"     onkeyup="buscarItem(this.value)">
+        <div id="resultado"></div>
         <button onclick="searchData()" class="btns btn-primary" name="btnpesquisar">
         <img src="img/search.svg" class="logos" alt="img search">
           </svg>
@@ -120,7 +130,7 @@ if (isset($_GET['excluir'])) {
         <thead>
           <tr>
             <th>Codigo</th>
-            <th>Descrição</th>
+            <th>Equipamentos</th>
             <th>Bloco</th>
             <th>Sala</th>
             <th>Observação</th>
@@ -130,6 +140,11 @@ if (isset($_GET['excluir'])) {
           if ($data == "") {
             $sql = "SELECT * FROM tb_item WHERE bloco = '$bloco_label' AND sala = '$lab_label' ORDER BY codigo_patrimonio;";
           }
+
+       /*   if ($valor == "")
+          {
+            $sql = mysqli_query($conexao,"SELECT * FROM tb_item WHERE codigo_patrimonio like '%".$valor."%'");
+          }*/
 
           $resultado = mysqli_query($conexao, $sql);
           while ($dados = mysqli_fetch_assoc($resultado)) {
@@ -167,7 +182,7 @@ if (isset($_GET['excluir'])) {
           <label for="txt_codigo">Codigo</label>
           <input name="txt_codigo" type="number" required />
 
-          <label for="txt_descricao">Descição</label>
+          <label for="txt_descricao">Equipamentos</label>
           <input name="txt_descricao" type="text" required />
 
           <label for="escolhas">Escolha o Bloco:</label>
@@ -209,7 +224,7 @@ if (isset($_GET['excluir'])) {
             <label for="txt_codigo">Codigo</label>
             <input name="txt_codigo" type="number" required value='<?= $dados['codigo_patrimonio'] ?>' />
 
-            <label for="txt_descricao">Descrição</label>
+            <label for="txt_descricao">Equipamentos</label>
             <input name="txt_descricao" type="text" required value='<?= $dados["descricao"] ?>' />
 
             <label for="escolhas">Escolha o Bloco:</label>
@@ -240,6 +255,46 @@ if (isset($_GET['excluir'])) {
     ?>
   </div>
   <script src="script.js"></script>
+
+  <script>
+  
+  var req;
+
+// FUNÇÃO PARA BUSCA NOTICIA
+function buscarItem(valor) {
+
+// Verificando Browser
+if(window.XMLHttpRequest) {
+   req = new XMLHttpRequest();
+}
+else if(window.ActiveXObject) {
+   req = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+// Arquivo PHP juntamente com o valor digitado no campo (método GET)
+var url = "busca.php?valor="+valor;
+
+// Chamada do método open para processar a requisição
+req.open("Get", url, true);
+
+// Quando o objeto recebe o retorno, chamamos a seguinte função;
+req.onreadystatechange = function() {
+
+    // Exibe a mensagem "Buscando Noticias..." enquanto carrega
+    
+
+    // Verifica se o Ajax realizou todas as operações corretamente
+    if(req.readyState == 4 && req.status == 200) {
+
+    // Resposta retornada pelo busca.php
+    var resposta = req.responseText;
+
+    // Abaixo colocamos a(s) resposta(s) na div resultado
+    document.getElementById('resultado').innerHTML = resposta;
+    }
+}
+req.send(null);
+}</script>
 </body>
 
 </html>
