@@ -115,6 +115,14 @@ if (isset($_GET['excluir'])) {
     .btnCancelar:hover {
       background-color: darkblue; /* Cor de fundo do botão ao passar o mouse */
     }
+
+    .manage-buttons a {
+      margin-right: 10px; /* Espaçamento entre os botões */
+    }
+
+    .manage-buttons a:last-child {
+      margin-right: 0; /* Remove o espaçamento no último botão */
+    }
   </style>
 </head>
 
@@ -129,131 +137,100 @@ if (isset($_GET['excluir'])) {
     <div class="header">
       <span>Cadastro de Itens</span>
       <div class="box-search">
-        <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar" onkeyup="buscarItem(this.value)">
+        <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar" onkeyup="handleKeyUp(event)">
         <div id="resultado"></div>
         <button onclick="searchData()" class="btns btn-primary" name="btnpesquisar">
           <img src="img/search.svg" class="logos" alt="img search">
         </button>
       </div>
-      <button onclick="resetSearch()" id="btnVoltar">Voltar</button> 
       <button onclick="openModal()" id="new">Incluir</button>
+      <button onclick="resetSearch()" id="btnVoltar">Voltar</button> 
     </div>
 
     <div class="crud-body">
       <div class="divTable">
-        <table>
-          <thead>
-            <tr>
-              <th>Codigo</th>
-              <th>Equipamentos</th>
-              <th>Bloco</th>
-              <th>Sala</th>
-              <th>Observação</th>
-              <th>Gerenciar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-            $resultado = mysqli_query($conexao, $sql);
-            while ($dados = mysqli_fetch_assoc($resultado)) {
-              echo '
-              <tr>
-                  <td> ' . $dados["codigo_patrimonio"] . '</td>
-                  <td>' . $dados["descricao"] . '</td>
-                  <td> ' . $dados["bloco"] . '</td>
-                  <td> ' . $dados["sala"] . '</td>
-                  <td> ' . $dados["observacao"] . '</td>
-                  <td class="btnExcluir">
-                      <a href="exibir_admin.php?excluir=' . $dados["codigo_patrimonio"] . '&bloco=' . $_SESSION["blocoL"] . '&lab=' . $_SESSION["labL"] . (!empty($data) ? '&search=' . $data : '') . '" id="new">
-                           Excluir
-                      </a>
-                      &nbsp;&nbsp;&nbsp;
-                      <a href="exibir_admin.php?alterar=' . $dados["codigo_patrimonio"] . '&bloco=' . $_SESSION["blocoL"] . '&lab=' . $_SESSION["labL"] . (!empty($data) ? '&search=' . $data : '') . '" onclick="openModal2()"  id="new">
-                          Alterar
-                      </a>
-                  </td>
-              </tr>
-            ';
-            }
-            ?>
-          </tbody>
-        </table>
+      <table class="table-center">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Equipamentos</th>
+            <th>Bloco</th>
+            <th>Sala</th>
+            <th>Observação</th>
+            <th>Gerenciar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $resultado = mysqli_query($conexao, $sql);
+        while ($dados = mysqli_fetch_assoc($resultado)) {
+            echo '<tr>';
+            echo '<td>' . $dados["codigo_patrimonio"] . '</td>';
+            echo '<td>' . $dados["descricao"] . '</td>';
+            echo '<td>' . $dados["bloco"] . '</td>';
+            echo '<td>' . $dados["sala"] . '</td>';
+            echo '<td>' . $dados["observacao"] . '</td>';
+            echo '<td class="manage-buttons">';
+            echo '<a href="exibir_admin.php?excluir=' . $dados["codigo_patrimonio"] . '&bloco=' . $_SESSION["blocoL"] . '&lab=' . $_SESSION["labL"] . (!empty($data) ? '&search=' . $data : '') . '" id="new">Excluir</a>';
+            echo '<a href="exibir_admin.php?alterar=' . $dados["codigo_patrimonio"] . '&bloco=' . $_SESSION["blocoL"] . '&lab=' . $_SESSION["labL"] . (!empty($data) ? '&search=' . $data : '') . '" id="new">Alterar</a>';
+            echo '</td>';
+            echo '</tr>';
+        }
+        ?>
+    </tbody>
+</table>
+
       </div>
     </div>
 
     <div class="modal-container" id="modal_insert">
       <div class="modal">
         <form action="exibir_admin.php" method="post">
-          <label for="txt_codigo">Codigo</label>
+          <label for="txt_codigo">Código</label>
           <input name="txt_codigo" type="number" required />
-          <label for="txt_descricao">Equipamentos</label>
+          <label for="txt_descricao">Equipamento</label>
           <input name="txt_descricao" type="text" required />
-          <label for="escolhas">Escolha o Bloco:</label>
-          <select name="txt_bloco" id="txt_bloco">
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-          </select><br>
-          <br><label for="escolhas">Escolha o Lab:</label>
-          <select name="txt_sala" id="txt_sala">
-            <option value="LAB 1">LAB 1</option>
-            <option value="LAB 2">LAB 2</option>
-            <option value="LAB 3">LAB 3</option>
-          </select><br>
-          <br><label for="txt_observacao">Observação</label>
-          <input name="txt_observacao" type="text" required />
-          <button id="btnSalvar" name="btnSalvar" type="submit">Salvar</button>
+          <label for="txt_bloco">Bloco</label>
+          <input name="txt_bloco" type="text" value="<?php echo $_SESSION["blocoL"]; ?>" required readonly />
+          <label for="txt_sala">Laboratório/Sala</label>
+          <input name="txt_sala" type="text" value="<?php echo $_SESSION["labL"]; ?>" required readonly />
+          <label for="txt_observacao">Observação</label>
+          <input name="txt_observacao" type="text" />
+          <button type="submit" class="btnSalvar" name="btnSalvar">Salvar</button>
           <button type="button" class="btnCancelar" onclick="closeModal()">Cancelar</button>
         </form>
       </div>
     </div>
 
-    <?php
-    if (!empty($_GET['alterar'])) {
-      include_once "conexao.php";
-      $codigo = $_GET['alterar'];
-      $sql = "SELECT * FROM tb_item WHERE codigo_patrimonio=" . $codigo;
-      $consulta = mysqli_query($conexao, $sql);
-      $dados = mysqli_fetch_array($consulta);
-    ?>
-      <div class="modal-container active" id="modal_edit">
-        <div class="modal">
-          <form action="exibir_admin.php?bloco=<?php echo $_SESSION["blocoL"]; ?>&lab=<?php echo $_SESSION["labL"]; ?><?php echo !empty($data) ? '&search=' . $data : ''; ?>" method="post">
-            <label for="txt_codigo">Codigo</label>
-            <input name="txt_codigo" type="number" required readonly value='<?= $dados['codigo_patrimonio'] ?>' />
-            <label for="txt_descricao">Equipamentos</label>
-            <input name="txt_descricao" type="text" required value='<?= $dados['descricao'] ?>' />
-            <label for="txt_bloco">Escolha o Bloco:</label>
-            <select name="txt_bloco" id="txt_bloco">
-              <option value="A" <?= ($dados['bloco'] == 'A') ? 'selected' : '' ?>>A</option>
-              <option value="B" <?= ($dados['bloco'] == 'B') ? 'selected' : '' ?>>B</option>
-              <option value="C" <?= ($dados['bloco'] == 'C') ? 'selected' : '' ?>>C</option>
-            </select><br>
-            <br><label for="txt_sala">Escolha o Lab:</label>
-            <select name="txt_sala" id="txt_sala">
-              <option value="LAB 1" <?= ($dados['sala'] == 'LAB 1') ? 'selected' : '' ?>>LAB 1</option>
-              <option value="LAB 2" <?= ($dados['sala'] == 'LAB 2') ? 'selected' : '' ?>>LAB 2</option>
-              <option value="LAB 3" <?= ($dados['sala'] == 'LAB 3') ? 'selected' : '' ?>>LAB 3</option>
-            </select><br>
-            <br><label for="txt_observacao">Observação</label>
-            <input name="txt_observacao" type="text" required value='<?= $dados['observacao'] ?>' />
-            <button id="btnAtualizar" name="btnAtualizar" type="submit">Atualizar</button>
-            <button type="button" class="btnCancelar" onclick="closeModal()">Cancelar</button>
-          </form>
-        </div>
+    <div class="modal-container" id="modal_update">
+      <div class="modal">
+        <form action="exibir_admin.php" method="post">
+          <label for="txt_codigo">Código</label>
+          <input name="txt_codigo" id="txt_codigo" type="number" readonly />
+          <label for="txt_descricao">Equipamento</label>
+          <input name="txt_descricao" id="txt_descricao" type="text" required />
+          <label for="txt_bloco">Bloco</label>
+          <input name="txt_bloco" id="txt_bloco" type="text" value="<?php echo $_SESSION["blocoL"]; ?>" required readonly />
+          <label for="txt_sala">Laboratório/Sala</label>
+          <input name="txt_sala" id="txt_sala" type="text" value="<?php echo $_SESSION["labL"]; ?>" required readonly />
+          <label for="txt_observacao">Observação</label>
+          <input name="txt_observacao" id="txt_observacao" type="text" />
+          <button type="submit" class="btnSalvar" name="btnAtualizar">Salvar</button>
+          <button type="button" class="btnCancelar" onclick="closeUpdateModal()">Cancelar</button>
+        </form>
       </div>
-    <?php
-    }
-    ?>
+    </div>
   </div>
 
   <script>
-    function buscarItem(valor) {
-      // Lógica de busca em tempo real (AJAX)
+    function handleKeyUp(event) {
+      if (event.key === 'Enter') {
+        searchData();
+      }
     }
 
     function searchData() {
-      let search = document.getElementById('pesquisar').value;
+      var search = document.getElementById('pesquisar').value;
       window.location.href = 'exibir_admin.php?search=' + search + '&bloco=<?php echo $_SESSION["blocoL"]; ?>&lab=<?php echo $_SESSION["labL"]; ?>';
     }
 
@@ -262,18 +239,22 @@ if (isset($_GET['excluir'])) {
     }
 
     function openModal() {
-      document.getElementById('modal_insert').classList.add('active');
-    }
-
-    function openModal2() {
-      document.getElementById('modal_edit').classList.add('active');
+      document.getElementById('modal_insert').style.display = 'flex';
     }
 
     function closeModal() {
-      document.getElementById('modal_insert').classList.remove('active');
-      document.getElementById('modal_edit').classList.remove('active');
-      // Redirecionar para a página principal ao fechar o modal de alteração
-      window.location.href = 'exibir_admin.php?bloco=<?php echo $_SESSION["blocoL"]; ?>&lab=<?php echo $_SESSION["labL"]; ?><?php echo !empty($data) ? '&search=' . $data : ''; ?>';
+      document.getElementById('modal_insert').style.display = 'none';
+    }
+
+    function openUpdateModal(codigo, descricao, observacao) {
+      document.getElementById('txt_codigo').value = codigo;
+      document.getElementById('txt_descricao').value = descricao;
+      document.getElementById('txt_observacao').value = observacao;
+      document.getElementById('modal_update').style.display = 'flex';
+    }
+
+    function closeUpdateModal() {
+      document.getElementById('modal_update').style.display = 'none';
     }
   </script>
 </body>

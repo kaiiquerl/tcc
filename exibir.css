@@ -95,7 +95,8 @@ tr {
 
 tbody tr td {
   vertical-align: text-top;
-  padding: 6px;
+  padding: 13px;
+  
 }
 
 thead tr th {
@@ -308,3 +309,14 @@ td button i:first-child {
   display: flex;
   gap: 10px;
 }
+
+.table-center th,
+.table-center td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-center td a {
+    text-align: left; /* Para manter o estilo original dos links/botões */
+}
+
