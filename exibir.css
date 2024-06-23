@@ -294,12 +294,13 @@ td button i:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .box-search {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1px;
   margin-right: auto; /* Adicionado */
 }
 
