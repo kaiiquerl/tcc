@@ -272,6 +272,8 @@ if (isset($_GET['excluir'])) {
     function closeModal() {
       document.getElementById('modal_insert').classList.remove('active');
       document.getElementById('modal_edit').classList.remove('active');
+      // Redirecionar para a página principal ao fechar o modal de alteração
+      window.location.href = 'exibir_admin.php?bloco=<?php echo $_SESSION["blocoL"]; ?>&lab=<?php echo $_SESSION["labL"]; ?><?php echo !empty($data) ? '&search=' . $data : ''; ?>';
     }
   </script>
 </body>

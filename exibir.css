@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -32,7 +32,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto 12px;
+  padding: 0 12px;
 }
 
 .header span {
@@ -41,7 +41,8 @@ button {
   word-break: break-all;
 }
 
-#new {
+#new,
+#btnVoltar {
   font-size: 16px;
   padding: 8px;
   border-radius: 5px;
@@ -62,19 +63,19 @@ button {
 
 .divTable {
   padding: 10px;
-  width: auto; 
-  height:inherit; 
-  overflow:auto;
+  width: 100%;
+  height: calc(100% - 70px);
+  overflow: auto;
 }
 
 .divTable::-webkit-scrollbar {
   width: 12px;
-  background-color: whitesmoke; 
+  background-color: whitesmoke;
 }
 
 .divTable::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: darkgray; 
+  background-color: darkgray;
 }
 
 table {
@@ -89,28 +90,26 @@ thead {
 }
 
 tr {
-  border-bottom: 1px solid rgb(238, 235, 235)!important;
+  border-bottom: 1px solid rgb(238, 235, 235) !important;
 }
 
 tbody tr td {
   vertical-align: text-top;
   padding: 6px;
-  max-width: 50px;
 }
 
 thead tr th {
   padding: 5px;
   text-align: center;
-  margin-bottom: 50px;
 }
-.btnExcluir{
+
+.btnExcluir {
   padding: 15px;
 }
 
 thead td {
   padding: 5px;
   text-align: center;
-  margin-bottom: 50px;
 }
 
 tbody tr {
@@ -118,7 +117,7 @@ tbody tr {
 }
 
 thead tr th.acao {
-  width: 100px!important;
+  width: 100px !important;
   text-align: center;
 }
 
@@ -130,23 +129,23 @@ tbody tr td.acao {
   body {
     font-size: 10px;
   }
-  
+
   .header span {
     font-size: 15px;
   }
 
-  #new {
+  #new,
+  #btnVoltar {
     padding: 5px;
     font-size: 10px;
   }
 
   thead tr th.acao {
-    width: auto!important;
+    width: auto !important;
   }
-  
-  
+
   td button i {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
 
   td button i:first-child {
@@ -154,11 +153,11 @@ tbody tr td.acao {
   }
 
   .modal {
-    width: 90%!important;
+    width: 90% !important;
   }
 
   .modal label {
-    font-size: 12px!important;
+    font-size: 12px !important;
   }
 }
 
@@ -191,9 +190,8 @@ tbody tr td.acao {
 }
 
 .modal input {
-  width: 100%;
   outline: none;
-  padding: 5px 10px; 
+  padding: 5px 10px;
   width: 100%;
   margin-bottom: 20px;
   border-top: none;
@@ -205,9 +203,8 @@ tbody tr td.acao {
   width: 100%;
   margin: 10px auto;
   outline: none;
-  border-radius: 20px; 
-  padding: 5px 10px; 
-  width: 100%;
+  border-radius: 20px;
+  padding: 5px 10px;
   border: none;
   background-color: rgb(57, 57, 226);
   color: white;
@@ -257,8 +254,8 @@ td button i:first-child {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100PX;
-  z-index: 999; 
+  height: 100px;
+  z-index: 999;
 }
 
 .top-bar button {
@@ -273,24 +270,40 @@ td button i:first-child {
 }
 
 .container {
-  margin-top: 60px; 
+  margin-top: 60px;
 }
-.scale {
-    font-size: 16px;
-    padding: 8px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
 
-  .scale {
-    transition: transform 0.3s ease;
+.scale {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.scale {
+  transition: transform 0.3s ease;
 }
 
 .scale:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
-  
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.box-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: auto; /* Adicionado */
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
