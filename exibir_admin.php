@@ -135,8 +135,8 @@ if (isset($_GET['excluir'])) {
           <img src="img/search.svg" class="logos" alt="img search">
         </button>
       </div>
+      <button onclick="resetSearch()" id="btnVoltar">Voltar</button> 
       <button onclick="openModal()" id="new">Incluir</button>
-      <button onclick="resetSearch()" id="btnVoltar">Voltar</button>
     </div>
 
     <div class="crud-body">
