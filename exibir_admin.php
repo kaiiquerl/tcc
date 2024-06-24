@@ -209,10 +209,18 @@ while ($dados = mysqli_fetch_assoc($resultado)) {
           <input name="txt_codigo" type="number" required />
           <label for="txt_descricao">Equipamento</label>
           <input name="txt_descricao" type="text" required />
-          <label for="txt_bloco">Bloco</label>
-          <input name="txt_bloco" type="text" value="<?php echo $_SESSION["blocoL"]; ?>" required readonly />
-          <label for="txt_sala">Laboratório/Sala</label>
-          <input name="txt_sala" type="text" value="<?php echo $_SESSION["labL"]; ?>" required readonly />
+          <label for="txt_bloco">Escolha o Bloco:</label>
+            <select name="txt_bloco" id="txt_bloco">
+              <option value="A" <?= ($dados['bloco'] == 'A') ? 'selected' : '' ?>>A</option>
+              <option value="B" <?= ($dados['bloco'] == 'B') ? 'selected' : '' ?>>B</option>
+              <option value="C" <?= ($dados['bloco'] == 'C') ? 'selected' : '' ?>>C</option>
+            </select><br>
+            <br><label for="txt_sala">Escolha o Lab:</label>
+            <select name="txt_sala" id="txt_sala">
+              <option value="LAB 1" <?= ($dados['sala'] == 'LAB 1') ? 'selected' : '' ?>>LAB 1</option>
+              <option value="LAB 2" <?= ($dados['sala'] == 'LAB 2') ? 'selected' : '' ?>>LAB 2</option>
+              <option value="LAB 3" <?= ($dados['sala'] == 'LAB 3') ? 'selected' : '' ?>>LAB 3</option>
+            </select><br><br>
           <label for="txt_observacao">Observação</label>
           <input name="txt_observacao" type="text" />
           <button type="submit" class="btnSalvar" name="btnSalvar">Salvar</button>
@@ -230,7 +238,7 @@ while ($dados = mysqli_fetch_assoc($resultado)) {
           <input name="txt_descricao" id="txt_descricao" type="text" required />
           <label for="txt_bloco">Bloco</label>
           <input name="txt_bloco" id="txt_bloco" type="text" value="<?php echo $_SESSION["blocoL"]; ?>" required readonly />
-          <label for="txt_sala">Laboratório/Sala</label>
+          <label for="txt_sala">Lab</label>
           <input name="txt_sala" id="txt_sala" type="text" value="<?php echo $_SESSION["labL"]; ?>" required readonly />
           <label for="txt_observacao">Observação</label>
           <input name="txt_observacao" id="txt_observacao" type="text" />
