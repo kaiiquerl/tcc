@@ -65,17 +65,73 @@ button {
   padding: 10px;
   width: 100%;
   height: calc(100% - 70px);
-  overflow: auto;
+  overflow: auto; /* Permite rolagem se necessário */
+  white-space: nowrap; /* Evita quebra de linha dentro da tabela */
 }
 
-.divTable::-webkit-scrollbar {
-  width: 12px;
-  background-color: whitesmoke;
+.table-center {
+  width: 100%;
+  border-collapse: collapse; /* Remove espaçamento entre células */
 }
 
-.divTable::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: darkgray;
+.table-center th,
+.table-center td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd; /* Adiciona borda às células */
+}
+
+thead {
+  background-color: #f4f4f4; /* Cor de fundo para o cabeçalho */
+}
+
+@media (max-width: 768px) {
+  .divTable {
+    overflow-x: auto;
+  }
+
+  .table-center {
+    width: 100%;
+    display: block;
+  }
+
+  .table-center thead,
+  .table-center tbody,
+  .table-center th,
+  .table-center td,
+  .table-center tr {
+    display: block;
+  }
+
+  .table-center thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table-center tr {
+    border: 1px solid #ccc;
+  }
+
+  .table-center td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  .table-center td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: calc(50% - 12px);
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+  }
 }
 
 table {
@@ -303,6 +359,21 @@ td button i:first-child {
   align-items: center;
   gap: 1px;
   margin-right: auto; /* Adicionado */
+}
+
+.box-search input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.box-search button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 .header-buttons {
