@@ -289,8 +289,18 @@ while ($dados = mysqli_fetch_assoc($resultado)) {
 
   function closeUpdateModal() {
     document.getElementById('modal_update').style.display = 'none';
+    clearURLParams(); // Limpar os parâmetros da URL
+  }
+
+  function clearURLParams() {
+    const url = new URL(window.location);
+    url.searchParams.delete('alterar');
+    url.searchParams.delete('descricao');
+    url.searchParams.delete('observacao');
+    history.replaceState(null, '', url.toString());
   }
 </script>
+
 
 </body>
 
