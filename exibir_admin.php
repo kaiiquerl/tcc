@@ -78,7 +78,25 @@ if (isset($_GET['excluir'])) {
   header('Location: ' . $redirectUrl);
   exit;
 }
+
+// Adiciona as variáveis de controle
+$alterar_codigo = "";
+$alterar_descricao = "";
+$alterar_observacao = "";
+
+// Verifica se existe a ação de alteração
+if (isset($_GET['alterar'])) {
+  $alterar_codigo = $_GET['alterar'];
+  $sql2 = "SELECT * FROM tb_item WHERE codigo_patrimonio = '$alterar_codigo'";
+  $result = mysqli_query($conexao, $sql2);
+  if ($row = mysqli_fetch_assoc($result)) {
+    $alterar_descricao = $row['descricao'];
+    $alterar_observacao = $row['observacao'];
+  }
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -161,22 +179,23 @@ if (isset($_GET['excluir'])) {
         </tr>
     </thead>
     <tbody>
-        <?php
-        $resultado = mysqli_query($conexao, $sql);
-        while ($dados = mysqli_fetch_assoc($resultado)) {
-            echo '<tr>';
-            echo '<td>' . $dados["codigo_patrimonio"] . '</td>';
-            echo '<td>' . $dados["descricao"] . '</td>';
-            echo '<td>' . $dados["bloco"] . '</td>';
-            echo '<td>' . $dados["sala"] . '</td>';
-            echo '<td>' . $dados["observacao"] . '</td>';
-            echo '<td class="manage-buttons">';
-            echo '<a href="exibir_admin.php?excluir=' . $dados["codigo_patrimonio"] . '&bloco=' . $_SESSION["blocoL"] . '&lab=' . $_SESSION["labL"] . (!empty($data) ? '&search=' . $data : '') . '" id="new">Excluir</a>';
-            echo '<a href="exibir_admin.php?alterar=' . $dados["codigo_patrimonio"] . '&bloco=' . $_SESSION["blocoL"] . '&lab=' . $_SESSION["labL"] . (!empty($data) ? '&search=' . $data : '') . '" id="new">Alterar</a>';
-            echo '</td>';
-            echo '</tr>';
-        }
-        ?>
+    <?php
+$resultado = mysqli_query($conexao, $sql);
+while ($dados = mysqli_fetch_assoc($resultado)) {
+    echo '<tr>';
+    echo '<td>' . $dados["codigo_patrimonio"] . '</td>';
+    echo '<td>' . $dados["descricao"] . '</td>';
+    echo '<td>' . $dados["bloco"] . '</td>';
+    echo '<td>' . $dados["sala"] . '</td>';
+    echo '<td>' . $dados["observacao"] . '</td>';
+    echo '<td class="manage-buttons">';
+    echo '<a href="exibir_admin.php?excluir=' . $dados["codigo_patrimonio"] . '&bloco=' . $_SESSION["blocoL"] . '&lab=' . $_SESSION["labL"] . (!empty($data) ? '&search=' . $data : '') . '" id="new">Excluir</a>';
+    echo '<a href="exibir_admin.php?alterar=' . $dados["codigo_patrimonio"] . '&descricao=' . urlencode($dados["descricao"]) . '&observacao=' . urlencode($dados["observacao"]) . '&bloco=' . $_SESSION["blocoL"] . '&lab=' . $_SESSION["labL"] . (!empty($data) ? '&search=' . $data : '') . '" id="new">Alterar</a>';
+    echo '</td>';
+    echo '</tr>';
+}
+?>
+
     </tbody>
 </table>
 
@@ -223,40 +242,56 @@ if (isset($_GET['excluir'])) {
   </div>
 
   <script>
-    function handleKeyUp(event) {
-      if (event.key === 'Enter') {
-        searchData();
-      }
-    }
+  document.addEventListener("DOMContentLoaded", function () {
+    // Verifica se há parâmetros para alterar na URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const alterar = urlParams.get('alterar');
 
-    function searchData() {
-      var search = document.getElementById('pesquisar').value;
-      window.location.href = 'exibir_admin.php?search=' + search + '&bloco=<?php echo $_SESSION["blocoL"]; ?>&lab=<?php echo $_SESSION["labL"]; ?>';
-    }
+    if (alterar) {
+      // Pega os dados passados na URL
+      const descricao = "<?php echo addslashes($alterar_descricao); ?>";
+      const observacao = "<?php echo addslashes($alterar_observacao); ?>";
 
-    function resetSearch() {
-      window.location.href = 'exibir_admin.php?bloco=<?php echo $_SESSION["blocoL"]; ?>&lab=<?php echo $_SESSION["labL"]; ?>';
+      // Chama a função para abrir o modal de atualização
+      openUpdateModal(alterar, descricao, observacao);
     }
+  });
 
-    function openModal() {
-      document.getElementById('modal_insert').style.display = 'flex';
+  function handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      searchData();
     }
+  }
 
-    function closeModal() {
-      document.getElementById('modal_insert').style.display = 'none';
-    }
+  function searchData() {
+    var search = document.getElementById('pesquisar').value;
+    window.location.href = 'exibir_admin.php?search=' + search + '&bloco=<?php echo $_SESSION["blocoL"]; ?>&lab=<?php echo $_SESSION["labL"]; ?>';
+  }
 
-    function openUpdateModal(codigo, descricao, observacao) {
-      document.getElementById('txt_codigo').value = codigo;
-      document.getElementById('txt_descricao').value = descricao;
-      document.getElementById('txt_observacao').value = observacao;
-      document.getElementById('modal_update').style.display = 'flex';
-    }
+  function resetSearch() {
+    window.location.href = 'exibir_admin.php?bloco=<?php echo $_SESSION["blocoL"]; ?>&lab=<?php echo $_SESSION["labL"]; ?>';
+  }
 
-    function closeUpdateModal() {
-      document.getElementById('modal_update').style.display = 'none';
-    }
-  </script>
+  function openModal() {
+    document.getElementById('modal_insert').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('modal_insert').style.display = 'none';
+  }
+
+  function openUpdateModal(codigo, descricao, observacao) {
+    document.getElementById('txt_codigo').value = codigo;
+    document.getElementById('txt_descricao').value = descricao;
+    document.getElementById('txt_observacao').value = observacao;
+    document.getElementById('modal_update').style.display = 'flex';
+  }
+
+  function closeUpdateModal() {
+    document.getElementById('modal_update').style.display = 'none';
+  }
+</script>
+
 </body>
 
 </html>
