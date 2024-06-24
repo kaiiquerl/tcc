@@ -171,7 +171,7 @@ if (isset($_GET['alterar'])) {
     <thead>
         <tr>
             <th>Código</th>
-            <th>Equipamentos</th>
+            <th>Equipamento</th>
             <th>Bloco</th>
             <th>Sala</th>
             <th>Observação</th>
