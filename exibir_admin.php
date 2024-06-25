@@ -131,9 +131,9 @@ if (isset($_GET['alterar'])) {
     }
 
     .btnCancelar:hover {
-      background-color: darkblue; /* Cor de fundo do botão ao passar o mouse */
+      background-color: #206ead; /* Cor de fundo do botão ao passar o mouse */
     }
-
+    
     .manage-buttons a {
       margin-right: 10px; /* Espaçamento entre os botões */
     }

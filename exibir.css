@@ -55,6 +55,7 @@ button {
   border: none;
   color: white;
   background-color: rgb(57, 57, 226);
+  background: #516ead;
 }
 
 #btnLimpar {
@@ -269,7 +270,7 @@ tbody tr td.acao {
   border-radius: 20px;
   padding: 5px 10px;
   border: none;
-  background-color: rgb(57, 57, 226);
+  background-color: #516ead;
   color: white;
 }
 
@@ -307,7 +308,7 @@ td button i:first-child {
 }
 
 .top-bar {
-  background-color: rgb(57, 57, 226);
+  background-color: #a2c8e7;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -373,7 +374,7 @@ td button i:first-child {
 }
 
 .box-search button {
-  background-color: #007bff;
+  background-color: #516ead;
   border: none;
   color: white;
   padding: 5px 10px;
