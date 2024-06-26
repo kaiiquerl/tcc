@@ -6,7 +6,7 @@
     align-items: center;
     padding: 10px; /* Ajuste conforme necessário */
     border-bottom: 2px solid #000000;
-    background-color:#a2c8e7
+    background-color:#3166d8
 }
 
 .welcome-text {
@@ -30,6 +30,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    
 }
 
 body {
@@ -39,13 +40,16 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     flex-direction: column;
-    color: #333
+    background: #1f2b47;
+    background-color:#1f2b47;
+    
 }
 
 
 body * {
     min-height: auto;
     box-sizing: border-box;
+
 }
 
 
@@ -57,7 +61,7 @@ body * {
 
     width: 100vw;
     height: 100vh;
-    background: #a2c8e7;
+    background: #1f2b47;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,9 +97,8 @@ body * {
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: #95b9fd;
+    background: #3b4e7d;
     border-radius: 20px;
-    box-shadow: 0px 10px 40px #6c9be0f5;
 }
 
 .card-login {
@@ -119,10 +122,9 @@ body * {
     border: none;
     border-radius: 10px;
     padding: 15px;
-    background: #98b6ed;
+    background: #5873b2 ;
     color: #ffffffde;
     font-size: 12pt;
-    box-shadow: 0px 10px 40px #2066cff5;
     outline: none;
     box-sizing: border-box;
 }
@@ -150,8 +152,7 @@ body * {
     font-weight: 800;
     letter-spacing: 3px;
     color: #ffffff;
-    background: #516ead;
-    box-shadow: 0px 10px 40px -12px #5096fff5;
+    background: #3166d8;
 
 }
 
@@ -168,8 +169,8 @@ body * {
     font-weight: 800;
     letter-spacing: 3px;
     color: #ffffff;
-    background: #516ead;
-    box-shadow: 0px 10px 40px -12px #5096fff5;
+    background: #3166d8;
+
 }
 
 .btn-cadastrar2 {
@@ -186,8 +187,7 @@ body * {
     font-weight: 800;
     letter-spacing: 3px;
     color: #ffffff;
-    background: #516ead;
-    box-shadow: 0px 10px 40px -12px #5096fff5;
+    background: #3166d8;
     text-decoration: none;
 }
 

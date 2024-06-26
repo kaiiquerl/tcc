@@ -55,7 +55,7 @@ button {
   border: none;
   color: white;
   background-color: rgb(57, 57, 226);
-  background: #516ead;
+  background: #3166d8
 }
 
 #btnLimpar {
@@ -308,7 +308,9 @@ td button i:first-child {
 }
 
 .top-bar {
-  background-color: #a2c8e7;
+
+ 
+  background-color: #3166d8;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -374,7 +376,7 @@ td button i:first-child {
 }
 
 .box-search button {
-  background-color: #516ead;
+  background-color: #3166d8;
   border: none;
   color: white;
   padding: 5px 10px;

@@ -17,7 +17,6 @@
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a href="login.php" class="nav-link text-white">Log Out</a></li>
-                    <li class="nav-item"><a href="sobre.php" class="nav-link text-white">Sobre</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,34 +26,41 @@
         <div class="row">
             <aside class="col-md-3">
                 <div class="list-group mb-3">
-                    <a href="#" class="list-group-item list-group-item-action active">Bloco A</a>
+                    <a class="list-group-item list-group-item-action active">Bloco A</a>
                     <a href="exibir_admin.php?bloco=A&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
                     <a href="exibir_admin.php?bloco=A&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
                     <a href="exibir_admin.php?bloco=A&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
                 </div>
                 <div class="list-group mb-3">
-                    <a href="#" class="list-group-item list-group-item-action active">Bloco B</a>
+                    <a class="list-group-item list-group-item-action active">Bloco B</a>
                     <a href="exibir_admin.php?bloco=B&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
                     <a href="exibir_admin.php?bloco=B&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
                     <a href="exibir_admin.php?bloco=B&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
                 </div>
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active">Bloco C</a>
+                    <a class="list-group-item list-group-item-action active">Bloco C</a>
                     <a href="exibir_admin.php?bloco=C&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
                     <a href="exibir_admin.php?bloco=C&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
                     <a href="exibir_admin.php?bloco=C&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
                 </div>
             </aside>
             <section class="col-md-9">
-                <div class="p-4 bg-white rounded shadow-sm">
-                    <h2>Bem-vindos ao School Stock!</h2>
-                    <p>Aqui, você pode registrar e gerenciar todos os patrimônios da sua escola de forma simples e eficiente. Estamos prontos para ajudar sua instituição a manter um inventário organizado. Explore nossa plataforma e simplifique sua gestão patrimonial conosco!</p>
-                    <img src="img/sejabemvindo.svg" alt="Bem-vindo" class="img-fluid mt-3">
+                <div class="container my-5">
+                    <div id="fundocor" class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" style="margin-left: -20px;">
+                        <div class="fundocor" style="display: flex;">
+                            <div style="width: 80%;">
+                                <h1 class="display-4 fw-bold lh-1 text-body-emphasis"><h1 class="cortxt">SCHOOL STOCK</h1></h1>
+                                <p class="cortxt">Bem-vindos ao School Stock! Aqui, você pode registrar e gerenciar todos os patrimônios da sua escola de forma simples e eficiente. Estamos prontos para ajudar sua instituição a manter um inventário organizado. Explore nossa plataforma e simplifique sua gestão patrimonial conosco!</p>
+                            </div>
+                            <img class="" src="img/sejabemvindo.svg" alt="gif" width="40%">
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
-
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
             <div class="row">
