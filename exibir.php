@@ -146,7 +146,7 @@ if (isset($_GET['alterar'])) {
 
 <body>
   <div class="top-bar">
-    <a href="menu_admin.php" class="scale">Home</a>
+    <a href="menu.php" class="scale">Home</a>
     <span id="selected-block">Bloco <?php echo $_SESSION["blocoL"]; ?></span>
     <span id="selected-lab"><?php echo $_SESSION["labL"]; ?></span>
   </div>
