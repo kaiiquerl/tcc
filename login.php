@@ -12,7 +12,6 @@ if (isset($_POST['btn_login'])) {
         exit();
     }
 
-    // Consulta segura usando consultas preparadas
     $sql = "SELECT * FROM tb_login WHERE usuario = ? AND senha = ?";
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param('ss', $usuarioP, $senhaP);
@@ -51,7 +50,6 @@ if (isset($_POST['btn_login'])) {
         exit();
     }
 
-    // Inserção segura usando consultas preparadas
     $sql = "INSERT INTO tb_login (usuario, senha) VALUES (?, ?)";
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param('ss', $usuario, $senha);

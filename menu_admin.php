@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,20 +20,19 @@
 
 <body class="bg-light">
 
-    <header class="header">
+<header class="header">
         <div class="headerimg">
             <img src="img/logo.svg" class="logoM" alt="logop">
         </div>
         <a class="welcome-text d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <h1 class="txtlogo">School Stock</h1>
         </a>
-
-
-
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Log Out</a></li>&nbsp;
-
-        </ul>
+        <div class="d-flex align-items-center">
+            <p class="me-3 mb-0" style="color: white">Bem-vindo, <?php echo $_SESSION['usuario']; ?>!</p>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Log Out</a></li>&nbsp;
+            </ul>
+        </div>
     </header>
 
 

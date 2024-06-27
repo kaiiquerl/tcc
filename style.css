@@ -496,7 +496,7 @@ main section {
 
 .txtlogo{
     color: white;
-    margin-left: 220px;
+    margin-left: 0px;
 }
 
 .cortxt{
@@ -542,5 +542,4 @@ display: flex;
 .fundo{
 background-image: url(img/fundomenu.png)
 }
-
 
