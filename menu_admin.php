@@ -10,46 +10,55 @@
 </head>
 
 <body class="bg-light">
-    <header class="bg-primary text-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
+
+    <header class="header">
+        <div class="headerimg">
             <img src="img/logo.svg" class="logoM" alt="logop">
-            <h1 class="h3 mb-0">School Stock</h1>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a href="login.php" class="nav-link text-white">Log Out</a></li>
-                </ul>
-            </nav>
         </div>
+        <a class="welcome-text d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <h1 class="txtlogo">School Stock</h1>
+        </a>
+
+
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="login.php" class="nav-link active" aria-current="page" id="meuBotao">Log Out</a></li>&nbsp;
+
+        </ul>
     </header>
 
+
     <main class="container my-5">
-        <div class="row">
-            <aside class="col-md-3">
-                <div class="list-group mb-3">
-                    <a class="list-group-item list-group-item-action active">Bloco A</a>
-                    <a href="exibir_admin.php?bloco=A&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
-                    <a href="exibir_admin.php?bloco=A&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
-                    <a href="exibir_admin.php?bloco=A&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
-                </div>
-                <div class="list-group mb-3">
-                    <a class="list-group-item list-group-item-action active">Bloco B</a>
-                    <a href="exibir_admin.php?bloco=B&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
-                    <a href="exibir_admin.php?bloco=B&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
-                    <a href="exibir_admin.php?bloco=B&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
-                </div>
-                <div class="list-group">
-                    <a class="list-group-item list-group-item-action active">Bloco C</a>
-                    <a href="exibir_admin.php?bloco=C&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
-                    <a href="exibir_admin.php?bloco=C&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
-                    <a href="exibir_admin.php?bloco=C&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
-                </div>
-            </aside>
+        <div class="row g-5" style="width: 100rem;">            
+                <aside class="col-md-3 p-4">
+                    <div class="list-group mb-3">
+                        <a class="list-group-item list-group-item-action active">Bloco A</a>
+                        <a href="exibir_admin.php?bloco=A&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
+                        <a href="exibir_admin.php?bloco=A&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
+                        <a href="exibir_admin.php?bloco=A&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
+                    </div>
+                    <div class="list-group mb-3">
+                        <a class="list-group-item list-group-item-action active">Bloco B</a>
+                        <a href="exibir_admin.php?bloco=B&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
+                        <a href="exibir_admin.php?bloco=B&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
+                        <a href="exibir_admin.php?bloco=B&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item list-group-item-action active">Bloco C</a>
+                        <a href="exibir_admin.php?bloco=C&lab=LAB 1" class="list-group-item list-group-item-action">Lab 1</a>
+                        <a href="exibir_admin.php?bloco=C&lab=LAB 2" class="list-group-item list-group-item-action">Lab 2</a>
+                        <a href="exibir_admin.php?bloco=C&lab=LAB 3" class="list-group-item list-group-item-action">Lab 3</a>
+                    </div>
+                </aside>
+            
             <section class="col-md-9">
                 <div class="container my-5">
-                    <div id="fundocor" class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" style="margin-left: -20px;">
+                    <div id="fundocor" class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" style="margin-left: -0px;">
                         <div class="fundocor" style="display: flex;">
                             <div style="width: 80%;">
-                                <h1 class="display-4 fw-bold lh-1 text-body-emphasis"><h1 class="cortxt">SCHOOL STOCK</h1></h1>
+                                <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
+                                    <h1 class="cortxt">SCHOOL STOCK</h1>
+                                </h1>
                                 <p class="cortxt">Bem-vindos ao School Stock! Aqui, você pode registrar e gerenciar todos os patrimônios da sua escola de forma simples e eficiente. Estamos prontos para ajudar sua instituição a manter um inventário organizado. Explore nossa plataforma e simplifique sua gestão patrimonial conosco!</p>
                             </div>
                             <img class="" src="img/sejabemvindo.svg" alt="gif" width="40%">
